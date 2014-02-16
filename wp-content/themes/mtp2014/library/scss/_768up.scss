@@ -1,0 +1,82 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	max-width: 1140px;
+}
+
+
+.buy{
+	position: absolute;
+	right: 0;
+	top: 190px;
+	padding: 25px 20px 30px;
+	width: auto !important;
+	text-align: justify;
+	h1,h3{
+		display: block;
+		padding: 0;
+		line-height: 1;
+		margin: 0;
+		text-align: justify;
+	}
+	h1{
+		font-size: 350%;
+
+	}
+	h3{
+		font-family: $sans-serif-headline;
+		font-size: 160%;
+		text-transform: lowercase;
+		font-variant:small-caps;
+	}
+	a{
+		line-height: 1;
+		font-size: 102%;
+		text-align: justify;
+	}
+}
+
+.content-home{
+	width: 450px;
+}
+
+.blog-home{
+  div{
+    max-width: 750px;
+    margin: 0 auto;
+    overflow: hidden;
+    article{
+      width: 30%;
+      margin-right: 5%;
+      display: block;
+      float: left;
+      padding: 30px 0 100px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

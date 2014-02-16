@@ -1,0 +1,36 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+
+.content-home{
+  width: 720px;
+  p{
+    width: 640px;
+    margin: 0 auto;
+  }
+}
+
+.blog-home{
+  div{
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+  
+    article{
+      width: 30%;
+      margin-right: 5%;
+      display: block;
+      float: left;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

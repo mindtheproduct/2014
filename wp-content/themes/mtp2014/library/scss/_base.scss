@@ -1,0 +1,286 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	font-family: $sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	color: $white;
+	background-color: $black;
+	background: url(../images/background.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+.archive {}                       /* archive page */
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                      /* 404 page */
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $white;
+	text-decoration: none;
+	padding-bottom: 7px;
+	background :url('../images/underline.png') repeat-x 0 100%;
+	text-transform: uppercase;
+	@include transition(all, 0.3s, ease-in-out);
+	font-weight: bold;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1{
+	font-family: $sans-serif-headline;
+	font-size: 250%;
+	text-transform: uppercase;
+	font-weight: 100;
+	line-height: 1.2;
+}
+
+h2{
+	font-family: $sans-serif-headline;
+	font-size: 150%;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+
+h3{
+	font-size: 150%;
+	font-weight: normal;
+}
+
+h4{
+	font-family: $sans-serif-headline;
+	font-size: 35px;
+	line-height: 1.1;
+	font-weight: normal;
+}
+
+h5{
+	font-size: 105%;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+h6{
+	text-transform: uppercase;
+	font-size: 90%;
+	opacity: 0.5;
+	font-weight: normal;
+}
+
+p{
+	font-size: 100%;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+a.logo{
+	background-image: none;
+	display: block;
+	text-align: center;
+	padding: 80px 0 50px;
+	img{
+		text-align: center;
+		width: 221px;
+		height: 52px;
+	}
+}
+
+footer{
+	background: #000;
+	clear: both;
+	display: block;
+	position: relative;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	p{
+		text-transform: uppercase;
+		color: $grey;
+		font-size: 80%;
+	}
+}
+
+.buy{
+	background-color: $blue;
+	margin: 0 auto;
+	text-align: right;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+	h1, h3{
+		font-family: $sans-serif-headline;
+		text-transform: lowercase;
+		font-variant:small-caps;
+		font-size: 130%;
+		display: inline;
+		padding-right: 10px;
+	}
+	a{
+		position: relative;
+		top: -2px;
+	}
+}
+
+.fb-root{
+	display: none;
+}
+
+.fb_edge_widget_with_comment{
+	top: 2px;
+	margin: 0 10px;
+}
+
+iframe.twitter-share-button{
+	position: relative;
+	top: 3px;
+}
+
+#___plusone_0{
+	position: relative;
+	top: 2px;
+}
+
+.content-home{
+	padding: 30px 0;
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	h1,p{
+		margin: 0 auto;
+		padding: 20px;
+	}
+}
+
+.blog-home{
+	@include transparent(#000, 0.6);
+	width: 100%;
+	div{
+		clear: both;
+	
+		article{
+				padding: 20px 40px 40px;
+		}
+	}
+}
+
+.sponsors{
+	overflow: hidden;
+	text-align: center;
+	padding: 250px 0 70px;
+}
+
+
