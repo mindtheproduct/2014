@@ -60,10 +60,10 @@
 		<div class="buy">
 
 			<?php if (get_field('buy_date')) { ?>
-				<h3 class="date"><?php the_field('buy_date'); ?></h3>
+				<h3 class="date"><?php the_field('buy_date');?></h3>
 			<?php } ?>
 			<?php if (get_field('buy_price')) { ?>
-				<h1 class="price"><?php the_field('buy_price'); ?></h1>
+				<h1 class="price"><?php the_field('buy_price');?></h1>
 			<?php } ?>
     	<?php if (get_field('buy_action')) { ?>
 				<?php the_field('buy_action'); ?>

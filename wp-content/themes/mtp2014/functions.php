@@ -179,5 +179,8 @@ function bones_wpsearch($form) {
 	return $form;
 } // don't remove this bracket!
 
+function custom_excerpt_length( $length ) {
+	return 20;
+}
 
 ?>
