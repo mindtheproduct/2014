@@ -395,6 +395,11 @@ LAYOUT & GRID STYLES
   .blog-home div a.excerpt-read-more {
     display: none; }
 
+.blog-main {
+  width: 700px; }
+  .blog-main h1 {
+    text-align: center; }
+
 /******************************************************************
 Site Name: 
 Author: 

@@ -2,22 +2,18 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
-
-					<div id="main" class="eightcol first clearfix" role="main">
+				<div class="wrap clearfix blog-main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
+								
 
 									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> <span class="amp">&amp;</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', ') );
-									?></p>
+									
 
-								</header>
+				
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
@@ -50,7 +46,6 @@
 
 						<?php endif; ?>
 
-					</div>
 
 
 				</div>

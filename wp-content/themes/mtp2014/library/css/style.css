@@ -1024,7 +1024,12 @@ you can add resource intensive styles.
       .blog-home div article:last-child {
         margin-right: 0; }
     .blog-home div a.excerpt-read-more {
-      display: none; } }
+      display: none; }
+
+  .blog-main {
+    width: 700px; }
+    .blog-main h1 {
+      text-align: center; } }
 /*
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
