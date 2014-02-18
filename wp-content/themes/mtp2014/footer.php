@@ -1,6 +1,8 @@
 			
 <section class="sponsors">
-      <a href="#">Interested in sponsoring?</a>
+    <?php if (get_field('interested_in_sponsoring')) { ?>
+      <a href="<?php the_field('interested_in_sponsoring');?>">Interested in sponsoring?</a>
+    <?php } ?>
     </section>
 
     <section class="blog-home">
