@@ -267,6 +267,14 @@ iframe.twitter-share-button{
 	text-align: center;
 	position: relative;
 	margin: 0 auto;
+	.post{
+		background-color: rgba(0, 0, 0, 0.5);
+		padding-bottom: 70px;
+		overflow: hidden;
+		p{
+			text-align: left;
+		}
+	}
 	h1{
 		margin: 0 auto;
 		padding: 20px;
