@@ -37,6 +37,9 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
+		<script type="text/javascript" src="//use.typekit.net/hba8xtt.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -56,16 +59,19 @@
 
 			</header>
 
-
 		<div class="buy">
-
-			<?php if (get_field('buy_date')) { ?>
-				<h3 class="date"><?php the_field('buy_date');?></h3>
-			<?php } ?>
-			<?php if (get_field('buy_price')) { ?>
-				<h1 class="price"><?php the_field('buy_price');?></h1>
-			<?php } ?>
-    	<?php if (get_field('buy_action')) { ?>
-				<?php the_field('buy_action'); ?>
-			<?php } ?>
-    </div>
+			<?php
+				$args = array('post_type' => 'price', 'posts_per_page' => 1);
+				$loop = new WP_Query($args);
+				while ($loop->have_posts()) : $loop->the_post(); ?>
+					<?php if (get_field('buy_date')) { ?>
+						<h3 class="date"><?php the_field('buy_date');?></h3>
+					<?php } ?>
+					<?php if (get_field('buy_price')) { ?>
+						<h1 class="price"><?php the_field('buy_price');?></h1>
+					<?php } ?>
+		    	<?php if (get_field('buy_action')) { ?>
+						<?php the_field('buy_action'); ?>
+					<?php } ?>
+			<?php endwhile; ?>
+		</div>

@@ -78,23 +78,8 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-@font-face{
-		font-family: 'BrandonGrotesque-Thin';
-		src: url('../webfonts/25E0A6_0_0.eot');
-		src: url('../webfonts/25E0A6_0_0.eot?#iefix') format('embedded-opentype'),
-		url('../webfonts/25E0A6_0_0.woff') format('woff'),
-		url('../webfonts/25E0A6_0_0.ttf') format('truetype');
-	}
-@font-face{
-	font-family: 'BrandonGrotesque-Regular';
-	src: url('../webfonts/25E0A6_1_0.eot');
-	src: url('../webfonts/25E0A6_1_0.eot?#iefix') format('embedded-opentype'),
-	url('../webfonts/25E0A6_1_0.woff') format('woff'),
-	url('../webfonts/25E0A6_1_0.ttf') format('truetype');
-}
-
-$sans-serif:        		'BrandonGrotesque-Regular', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$sans-serif-headline:		'BrandonGrotesque-Thin', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$sans-serif:        		"brandon-grotesque", 'BrandonGrotesque-Regular', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$sans-serif-headline:		"brandon-grotesque", 'BrandonGrotesque-Thin', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 
 

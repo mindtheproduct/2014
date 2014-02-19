@@ -435,16 +435,6 @@ http://sachagreif.com/sass-color-variables/
 /*********************
 TYPOGRAPHY
 *********************/
-@font-face {
-  font-family: 'BrandonGrotesque-Thin';
-  src: url("../webfonts/25E0A6_0_0.eot");
-  src: url("../webfonts/25E0A6_0_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/25E0A6_0_0.woff") format("woff"), url("../webfonts/25E0A6_0_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'BrandonGrotesque-Regular';
-  src: url("../webfonts/25E0A6_1_0.eot");
-  src: url("../webfonts/25E0A6_1_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/25E0A6_1_0.woff") format("woff"), url("../webfonts/25E0A6_1_0.ttf") format("truetype"); }
-
 /*
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
@@ -508,7 +498,7 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 .button, .button:visited {
-  font-family: "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "brandon-grotesque", "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   border: 1px solid #dedede;
   border-top-color: #ededed;
   border-left-color: #ededed;
@@ -576,7 +566,7 @@ html {
   padding: 0; }
 
 body {
-  font-family: "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "brandon-grotesque", "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: white;
@@ -585,7 +575,8 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  font-weight: 400; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -645,7 +636,7 @@ a, a:visited {
   -webkit-transition: all, 0.3s, ease-in-out;
   -transition: all, 0.3s, ease-in-out;
   transition: all, 0.3s, ease-in-out;
-  font-weight: bold;
+  font-weight: 900;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
@@ -663,9 +654,9 @@ a, a:visited {
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "brandon-grotesque", "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 500;
+  font-weight: 100;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -675,39 +666,31 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     text-decoration: none; }
 
 h1 {
-  font-family: "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 250%;
   text-transform: uppercase;
   font-weight: 100;
   line-height: 1.2; }
 
 h2 {
-  font-family: "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 150%;
-  font-weight: normal;
   text-transform: uppercase;
   line-height: 1.2; }
 
 h3 {
-  font-size: 150%;
-  font-weight: normal; }
+  font-size: 150%; }
 
 h4 {
-  font-family: "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 35px;
-  line-height: 1.1;
-  font-weight: normal; }
+  line-height: 1.1; }
 
 h5 {
   font-size: 105%;
-  text-transform: uppercase;
-  font-weight: normal; }
+  text-transform: uppercase; }
 
 h6 {
   text-transform: uppercase;
   font-size: 90%;
-  opacity: 0.5;
-  font-weight: normal; }
+  opacity: 0.5; }
 
 p {
   font-size: 100%;
@@ -736,6 +719,18 @@ footer {
     text-transform: uppercase;
     color: #858587;
     font-size: 80%; }
+  footer a.social-link {
+    background: none;
+    position: relative;
+    top: 10px;
+    margin: 0 0 0 5px; }
+    footer a.social-link:first-child {
+      margin-left: 15px; }
+    footer a.social-link:hover {
+      opacity: 0.8; }
+    footer a.social-link img {
+      width: 36px;
+      height: 36px; }
 
 .buy {
   background-color: #00aeef;
@@ -747,7 +742,7 @@ footer {
   width: 100%;
   z-index: 10000; }
   .buy h1, .buy h3 {
-    font-family: "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "brandon-grotesque", "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     text-transform: lowercase;
     font-variant: small-caps;
     font-size: 130%;
@@ -772,15 +767,15 @@ iframe.twitter-share-button {
   position: relative;
   top: 2px; }
 
-.content-home {
+.content-main {
   padding: 30px 0;
   text-align: center;
   position: relative;
   margin: 0 auto; }
-  .content-home h1 {
+  .content-main h1 {
     margin: 0 auto;
     padding: 20px; }
-  .content-home p {
+  .content-main p {
     margin: 0 auto;
     padding: 20px 20px 0; }
 
@@ -999,7 +994,7 @@ you can add resource intensive styles.
     .buy h1 {
       font-size: 350%; }
     .buy h3 {
-      font-family: "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-family: "brandon-grotesque", "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-size: 155%;
       text-transform: lowercase;
       font-variant: small-caps; }
@@ -1008,7 +1003,7 @@ you can add resource intensive styles.
       font-size: 106%;
       text-align: justify; }
 
-  .content-home {
+  .content-main {
     width: 450px; }
 
   .blog-home div {
@@ -1047,9 +1042,9 @@ you can add resource intensive styles.
   be seen on the Desktop. 
   
   ******************************************************************/
-  .content-home {
+  .content-main {
     width: 720px; }
-    .content-home p {
+    .content-main p {
       width: 640px;
       margin: 0 auto; }
 

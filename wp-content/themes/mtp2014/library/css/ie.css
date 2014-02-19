@@ -70,16 +70,6 @@ http://sachagreif.com/sass-color-variables/
 /*********************
 TYPOGRAPHY
 *********************/
-@font-face {
-  font-family: 'BrandonGrotesque-Thin';
-  src: url("../webfonts/25E0A6_0_0.eot");
-  src: url("../webfonts/25E0A6_0_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/25E0A6_0_0.woff") format("woff"), url("../webfonts/25E0A6_0_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'BrandonGrotesque-Regular';
-  src: url("../webfonts/25E0A6_1_0.eot");
-  src: url("../webfonts/25E0A6_1_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/25E0A6_1_0.woff") format("woff"), url("../webfonts/25E0A6_1_0.ttf") format("truetype"); }
-
 /*
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
@@ -143,7 +133,7 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 .button, .button:visited {
-  font-family: "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "brandon-grotesque", "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   border: 1px solid #dedede;
   border-top-color: #ededed;
   border-left-color: #ededed;
@@ -368,7 +358,7 @@ LAYOUT & GRID STYLES
   .buy h1 {
     font-size: 350%; }
   .buy h3 {
-    font-family: "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "brandon-grotesque", "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 155%;
     text-transform: lowercase;
     font-variant: small-caps; }
@@ -377,7 +367,7 @@ LAYOUT & GRID STYLES
     font-size: 106%;
     text-align: justify; }
 
-.content-home {
+.content-main {
   width: 450px; }
 
 .blog-home div {
@@ -410,9 +400,9 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
-.content-home {
+.content-main {
   width: 720px; }
-  .content-home p {
+  .content-main p {
     width: 640px;
     margin: 0 auto; }
 
