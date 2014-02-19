@@ -231,8 +231,6 @@ footer{
 	z-index: 10000;
 	h1, h3{
 		font-family: $sans-serif-headline;
-		text-transform: lowercase;
-		font-variant:small-caps;
 		font-size: 130%;
 		display: inline;
 		padding-right: 10px;
@@ -241,25 +239,6 @@ footer{
 		position: relative;
 		top: -2px;
 	}
-}
-
-.fb-root{
-	display: none;
-}
-
-.fb_edge_widget_with_comment{
-	top: 2px;
-	margin: 0 10px;
-}
-
-iframe.twitter-share-button{
-	position: relative;
-	top: 3px;
-}
-
-#___plusone_0{
-	position: relative;
-	top: 2px;
 }
 
 .content-main{

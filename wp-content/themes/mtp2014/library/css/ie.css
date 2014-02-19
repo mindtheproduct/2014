@@ -356,15 +356,13 @@ LAYOUT & GRID STYLES
     margin: 0;
     text-align: justify; }
   .buy h1 {
-    font-size: 350%; }
+    font-size: 380%; }
   .buy h3 {
     font-family: "brandon-grotesque", "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 155%;
-    text-transform: lowercase;
-    font-variant: small-caps; }
+    font-size: 155%; }
   .buy a {
     line-height: 1.1;
-    font-size: 106%;
+    font-size: 109%;
     text-align: justify; }
 
 .content-main {
