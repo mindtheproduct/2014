@@ -42,8 +42,8 @@
                 <?php if (get_field('facebook_link')) { ?>
                   <a class="social-link" href="<?php the_field('twitter_link');?>"><img src="<?php bloginfo('template_directory');?>/library/images/twitter.png" alt="Share on Twitter" /></a>
                 <?php } ?>
-                <?php if (get_field('twitter_link')) { ?>
-                  <a class="social-link" href="<?php the_field('twitter_link');?>"><img src="<?php bloginfo('template_directory');?>/library/images/facebook.png" alt="Share on Facebook" /></a></li>
+                <?php if (get_field('facebook_link')) { ?>
+                  <a class="social-link" href="<?php the_field('facebook_link');?>"><img src="<?php bloginfo('template_directory');?>/library/images/facebook.png" alt="Share on Facebook" /></a>
                 <?php } ?>
                 <?php if (get_field('google_link')) { ?>
                   <a class="social-link" href="<?php the_field('google_link');?>"><img src="<?php bloginfo('template_directory');?>/library/images/google_plus.png" alt="Share on Google +" /></a>
