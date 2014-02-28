@@ -1,5 +1,13 @@
 			
-<section class="sponsors">
+  <section class="sponsors">
+    <h5>Signature sponsor</h5>
+    <ul>
+      <li>
+        <a href="http://tesco.com">
+          <img src="<?php bloginfo('template_directory');?>/library/images/sponsors/tesco.png" alt="Tesco" />
+        </a>
+      </li>
+    </ul>
     <?php if (get_field('interested_in_sponsoring')) { ?>
       <a href="<?php the_field('interested_in_sponsoring');?>">Interested in sponsoring?</a>
     <?php } ?>
@@ -16,8 +24,11 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 					<h2><?php the_title(); ?></h2>
 
-							<?php the_excerpt(); ?>
-						 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read more</a>
+							<?php
+                global $more;
+                $more = 0;
+                the_content('Read more');
+              ?> 
 
 					</article>
 					<?php endforeach; ?>

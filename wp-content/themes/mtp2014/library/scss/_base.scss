@@ -218,6 +218,20 @@ footer{
 		margin: 0 auto;
 		padding: 20px 20px 0;
 	}
+	article{
+    a{
+      background: none;
+      text-decoration: underline;
+    }
+    div{
+      margin: 30px 0;
+    }
+    &.post-19{
+      a{
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .blog-home{
@@ -227,17 +241,44 @@ footer{
 		clear: both;
 		article{
 				padding: 20px 40px 40px;
+				a{
+					display: block;
+					margin-top: 10px;
+					max-width: 100px;
+					&:before{
+						clear: both;
+					}
+				}
 		}
-		a.excerpt-read-more{
-      display: none;
-    }
 	}
 }
 
 .sponsors{
 	overflow: hidden;
 	text-align: center;
-	padding: 250px 0 70px;
+	padding: 170px 0 70px;
+	h5{
+		opacity: 0.4;
+	}
+	ul{
+		margin-bottom: 30px;
+		li{
+			display: inline-block;
+			margin: 10px 20px;
+			a{
+				display: inline-block;
+				max-width: 200px;
+				background: none;
+				opacity: 0.9;
+				&:hover{
+					opacity: 1;
+				}
+				img{
+					max-width: 200px;
+				}
+			}
+		}
+	}
 }
 
 
