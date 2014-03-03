@@ -1,17 +1,5 @@
-			
-  <section class="sponsors">
-    <h5>Signature sponsor</h5>
-    <ul>
-      <li>
-        <a href="http://tesco.com">
-          <img src="<?php bloginfo('template_directory');?>/library/images/sponsors/tesco.png" alt="Tesco" />
-        </a>
-      </li>
-    </ul>
-    <?php if (get_field('interested_in_sponsoring')) { ?>
-      <a href="<?php the_field('interested_in_sponsoring');?>">Interested in sponsoring?</a>
-    <?php } ?>
-    </section>
+   
+    <?php include('sponsors.php'); ?>
 
     <section class="blog-home">
     

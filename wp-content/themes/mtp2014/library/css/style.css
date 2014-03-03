@@ -499,44 +499,50 @@ BUTTONS
 *********************/
 .button, .button:visited {
   font-family: "brandon-grotesque", "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  border: 1px solid #dedede;
-  border-top-color: #ededed;
-  border-left-color: #ededed;
-  padding: 4px 12px;
+  border: 1px solid #007ead;
+  border-top-color: #0094cb;
+  border-left-color: #0094cb;
+  padding: 5px 12px;
   color: white;
   display: inline-block;
   font-size: 11px;
-  font-weight: bold;
+  text-transform: uppercase;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
   margin-bottom: 20px;
   line-height: 21px;
-  border-radius: 4px;
-  background-color: #f2f2f2;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f2f2f2));
-  background-image: -webkit-linear-gradient(top, white, #f2f2f2);
-  background-image: -moz-linear-gradient(top, white, #f2f2f2);
-  background-image: -o-linear-gradient(top, white, #f2f2f2);
-  background-image: linear-gradient(to bottom, white, #f2f2f2); }
+  background-color: #009bd5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00aeef), to(#009bd5));
+  background-image: -webkit-linear-gradient(top, #00aeef, #009bd5);
+  background-image: -moz-linear-gradient(top, #00aeef, #009bd5);
+  background-image: -o-linear-gradient(top, #00aeef, #009bd5);
+  background-image: linear-gradient(to bottom, #00aeef, #009bd5);
+  position: relative;
+  top: -2px;
+  left: -2px; }
   .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
     color: white;
-    border: 1px solid #dedede;
-    border-top-color: #cccccc;
-    border-left-color: #cccccc;
-    background-color: #e6e6e6;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
-    background-image: -moz-linear-gradient(top, #f2f2f2, #e6e6e6);
-    background-image: -o-linear-gradient(top, #f2f2f2, #e6e6e6);
-    background-image: linear-gradient(to bottom, #f2f2f2, #e6e6e6); }
+    border: 1px solid #007ead;
+    border-top-color: #006489;
+    border-left-color: #006489;
+    background-color: #0089bc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009bd5), to(#0089bc));
+    background-image: -webkit-linear-gradient(top, #009bd5, #0089bc);
+    background-image: -moz-linear-gradient(top, #009bd5, #0089bc);
+    background-image: -o-linear-gradient(top, #009bd5, #0089bc);
+    background-image: linear-gradient(to bottom, #009bd5, #0089bc); }
   .button:active, .button:visited:active {
-    background-color: white;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(white));
-    background-image: -webkit-linear-gradient(top, #f2f2f2, white);
-    background-image: -moz-linear-gradient(top, #f2f2f2, white);
-    background-image: -o-linear-gradient(top, #f2f2f2, white);
-    background-image: linear-gradient(to bottom, #f2f2f2, white); }
+    background-color: #00aeef;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009bd5), to(#00aeef));
+    background-image: -webkit-linear-gradient(top, #009bd5, #00aeef);
+    background-image: -moz-linear-gradient(top, #009bd5, #00aeef);
+    background-image: -o-linear-gradient(top, #009bd5, #00aeef);
+    background-image: linear-gradient(to bottom, #009bd5, #00aeef); }
+
+input.email {
+  font-size: 110%;
+  min-width: 200px;
+  padding-left: 7px; }
 
 /*
 BASE (MOBILE) SIZE
@@ -757,6 +763,8 @@ footer {
     opacity: 0.4; }
   .sponsors ul {
     margin-bottom: 30px; }
+    .sponsors ul.signature li a img {
+      max-width: 200px; }
     .sponsors ul li {
       display: inline-block;
       margin: 10px 20px; }
@@ -768,7 +776,10 @@ footer {
         .sponsors ul li a:hover {
           opacity: 1; }
         .sponsors ul li a img {
-          max-width: 200px; }
+          max-width: 100px; }
+
+form.validate {
+  margin-top: 50px; }
 
 /*
 LARGER MOBILE DEVICES

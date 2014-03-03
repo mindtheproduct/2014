@@ -262,6 +262,9 @@ footer{
 	}
 	ul{
 		margin-bottom: 30px;
+		&.signature li a img{
+			max-width: 200px;
+		}
 		li{
 			display: inline-block;
 			margin: 10px 20px;
@@ -274,11 +277,15 @@ footer{
 					opacity: 1;
 				}
 				img{
-					max-width: 200px;
+					max-width: 100px;
 				}
 			}
 		}
 	}
+}
+
+form.validate{
+	margin-top: 50px;
 }
 
 

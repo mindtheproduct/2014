@@ -368,4 +368,33 @@ function bones_get_the_author_posts_link() {
 	return $link;
 }
 
+function removeReadMoreHash($link) {
+   $offset = strpos($link, '#more-');
+   if ($offset) {
+	  $end = strpos($link, '"',$offset);
+   }
+   if ($end) {
+	  $link = substr_replace($link, '', $offset, $end-$offset);
+   }
+   return $link;
+}
+add_filter('the_content_more_link', 'removeReadMoreHash');
+
+function posttype_admin_css() {
+	global $post_type;
+	if($post_type == 'sponsors' || $post_type == 'price' || $post_type == 'social') {
+	echo '<style type="text/css">#edit-slug-box,#view-post-btn,#post-preview,.updated p a{display: none;}</style>';
+	}
+}
+add_action('admin_print_styles-post-new.php', 'posttype_admin_css'); 
+// Style action for the post editting page 
+add_action('admin_print_styles-post.php', 'posttype_admin_css'); 
+
+function prefix_remove_wp_seo_meta_box() {
+	remove_meta_box( 'wpseo_meta', 'sponsors', 'normal' );
+	remove_meta_box( 'wpseo_meta', 'price', 'normal' );
+	remove_meta_box( 'wpseo_meta', 'social', 'normal' );
+}
+add_action( 'add_meta_boxes', 'prefix_remove_wp_seo_meta_box', 100000 );
+
 ?>
