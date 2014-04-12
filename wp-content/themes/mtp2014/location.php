@@ -20,12 +20,23 @@ Template Name: Locations
           geocoder = new google.maps.Geocoder();
           bounds = new google.maps.LatLngBounds();
 
+          var styles = [
+            {
+              "stylers": [
+                { "invert_lightness": true },
+                { "saturation": -100 }
+              ]
+            }
+          ]
+
           var myOptions = {
-              zoom: 16, 
+              zoom: 15, 
               mapTypeId: google.maps.MapTypeId.ROADMAP,
+              scrollwheel: false,
               navigationControlOptions: {
                   style: google.maps.NavigationControlStyle.SMALL
-              }
+              },
+              styles: styles
           };
           map = new google.maps.Map(document.getElementById("locations-map"), myOptions);
 
