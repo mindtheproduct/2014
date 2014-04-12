@@ -12,6 +12,7 @@
 
 								<section class="entry-content" itemprop="articleBody">
 									<?php the_content(); ?>
+									
 							</section>
 						
 

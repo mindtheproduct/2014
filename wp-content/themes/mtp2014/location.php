@@ -164,7 +164,7 @@ Template Name: Locations
     </div>
 </div>
    
-    <section id="locations-map" style="height:600px;width:100%;"></section>
+<section id="locations-map" style="height:600px;width:100%;background-color: #000;"></section>
   <ul class="locations">
       <?php
         $args = array('post_type' => 'locations', 'posts_per_page' => -1);
