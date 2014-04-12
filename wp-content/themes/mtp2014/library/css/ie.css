@@ -151,7 +151,7 @@ BUTTONS
   background-image: -webkit-linear-gradient(top, #00aeef, #009bd5);
   background-image: -moz-linear-gradient(top, #00aeef, #009bd5);
   background-image: -o-linear-gradient(top, #00aeef, #009bd5);
-  background-image: linear-gradient(to bottom, #00aeef, #009bd5);
+  background-image: linear-gradient(top bottom, #00aeef, #009bd5);
   position: relative;
   top: -2px;
   left: -2px; }
@@ -165,14 +165,14 @@ BUTTONS
     background-image: -webkit-linear-gradient(top, #009bd5, #0089bc);
     background-image: -moz-linear-gradient(top, #009bd5, #0089bc);
     background-image: -o-linear-gradient(top, #009bd5, #0089bc);
-    background-image: linear-gradient(to bottom, #009bd5, #0089bc); }
+    background-image: linear-gradient(top bottom, #009bd5, #0089bc); }
   .button:active, .button:visited:active {
     background-color: #00aeef;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#009bd5), to(#00aeef));
     background-image: -webkit-linear-gradient(top, #009bd5, #00aeef);
     background-image: -moz-linear-gradient(top, #009bd5, #00aeef);
     background-image: -o-linear-gradient(top, #009bd5, #00aeef);
-    background-image: linear-gradient(to bottom, #009bd5, #00aeef); }
+    background-image: linear-gradient(top bottom, #009bd5, #00aeef); }
 
 input.email {
   font-size: 110%;
