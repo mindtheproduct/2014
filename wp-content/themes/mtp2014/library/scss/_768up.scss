@@ -61,7 +61,7 @@ LAYOUT & GRID STYLES
 	width: 450px;
 }
 
-.blog-home{
+.blog-home, .locations{
   div{
     max-width: 750px;
     margin: 0 auto;
@@ -77,6 +77,10 @@ LAYOUT & GRID STYLES
       }
     }
   }
+}
+
+.locations div article{
+  padding: 30px 0 20px 50px;
 }
 
 .blog-main{

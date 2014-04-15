@@ -754,21 +754,21 @@ footer {
   .content-main article.post-19 a {
     text-decoration: none; }
 
-.blog-home {
+.blog-home, .locations {
   background-color: transparent;
   background-color: rgba(0, 0, 0, 0.6);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
   zoom: 1;
   width: 100%; }
-  .blog-home div {
+  .blog-home div, .locations div {
     clear: both; }
-    .blog-home div article {
+    .blog-home div article, .locations div article {
       padding: 20px 40px 40px; }
-      .blog-home div article a {
+      .blog-home div article a, .locations div article a {
         display: block;
         margin-top: 10px;
         max-width: 100px; }
-        .blog-home div article a:before {
+        .blog-home div article a:before, .locations div article a:before {
           clear: both; }
 
 .sponsors {
@@ -903,28 +903,26 @@ form.validate {
   height: 40px;
   background-color: transparent; }
 
+.locations div article {
+  padding-left: 50px;
+  background: url(../images/map/0.png) no-repeat 8px 32px;
+  background-size: 27px 28px; }
+  .locations div article:nth-child(2) {
+    background-image: url(../images/map/1.png); }
+  .locations div article:nth-child(3) {
+    background-image: url(../images/map/2.png); }
+  .locations div article h5 {
+    margin: 0;
+    padding: 0; }
+    .locations div article h5 a {
+      line-height: 2.1;
+      display: inline;
+      max-width: 100%; }
+
 .locations {
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
-  margin: 70px 0; }
-  .locations li {
-    display: inline-block;
-    width: 25%;
-    margin: 0 30px;
-    text-align: left;
-    padding-left: 50px;
-    background: url(../images/map/0.png) no-repeat 15px 5px;
-    background-size: 27px 28px; }
-    .locations li:nth-child(2) {
-      background-image: url(../images/map/1.png); }
-    .locations li:nth-child(3) {
-      background-image: url(../images/map/2.png); }
-    .locations li h5 {
-      margin: 0;
-      padding: 0; }
-      .locations li h5 a {
-        line-height: 2.1; }
+  padding: 30px 0; }
+  .locations div article {
+    padding-bottom: 0; }
 
 .map-popup {
   color: #000;
@@ -1155,18 +1153,21 @@ you can add resource intensive styles.
   .content-main {
     width: 450px; }
 
-  .blog-home div {
+  .blog-home div, .locations div {
     max-width: 750px;
     margin: 0 auto;
     overflow: hidden; }
-    .blog-home div article {
+    .blog-home div article, .locations div article {
       width: 30%;
       margin-right: 5%;
       display: block;
       float: left;
       padding: 30px 0 100px; }
-      .blog-home div article:last-child {
+      .blog-home div article:last-child, .locations div article:last-child {
         margin-right: 0; }
+
+  .locations div article {
+    padding: 30px 0 20px 50px; }
 
   .blog-main {
     width: 700px; }
@@ -1185,16 +1186,16 @@ you can add resource intensive styles.
       width: 640px;
       margin: 0 auto; }
 
-  .blog-home div {
+  .blog-home div, .locations div {
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden; }
-    .blog-home div article {
+    .blog-home div article, .locations div article {
       width: 30%;
       margin-right: 5%;
       display: block;
       float: left; }
-      .blog-home div article:last-child {
+      .blog-home div article:last-child, .locations div article:last-child {
         margin-right: 0; } }
 /*
 LARGE VIEWING SIZE

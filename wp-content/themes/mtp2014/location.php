@@ -165,18 +165,22 @@ Template Name: Locations
 </div>
    
 <section id="locations-map" style="height:600px;width:100%;background-color: #000;"></section>
-  <ul class="locations">
+  <section class="locations">
+    <div>
       <?php
         $args = array('post_type' => 'locations', 'posts_per_page' => -1);
         $loop = new WP_Query($args);
         while ($loop->have_posts()) : $loop->the_post(); ?>
-        <li>
-          <h5><a href="<?php the_field("directions_link"); ?>"><?php the_title(); ?></a></h5>
-          <p><?php the_field("address"); ?>, <?php the_field("post_code"); ?><br />
-          <?php the_field("location_other_information"); ?></p>
-        </li>
+        
+          <article>
+            <h5><a href="<?php the_field("directions_link"); ?>"><?php the_title(); ?></a></h5>
+            <p><?php the_field("address"); ?>, <?php the_field("post_code"); ?><br />
+            <?php the_field("location_other_information"); ?></p>
+          </article>
+        
       <?php endwhile; ?>
-    </ul>
+      </div>
+    </section>
 
 
 <?php get_footer(); ?>
