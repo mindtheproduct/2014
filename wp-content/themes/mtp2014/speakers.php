@@ -27,7 +27,7 @@ Template Name: Speakers
     if($speakers->have_posts()) : ?>
 
 
-      <ul>
+      <ul class="accordion">
         <?php while ($speakers->have_posts()) : $speakers->the_post(); ?>
         <li>
           <div class="schedule">
@@ -41,7 +41,7 @@ Template Name: Speakers
         </li>
           <li>
 
-            <div class="schedule">
+          <div class="schedule">
             <?php if (get_field('schedule_time')) { ?>
                 <time><?php the_field('schedule_time');?></time>
               <?php } ?>

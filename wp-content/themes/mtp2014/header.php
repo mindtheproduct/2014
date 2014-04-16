@@ -40,6 +40,47 @@
 		<script type="text/javascript" src="//use.typekit.net/hba8xtt.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+		<!-- for the accordian -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+	  (function(){
+
+	    $(function(){
+	      $('.accordion').accordion();
+	    });
+
+	    // Content accordions
+	    $.fn.accordion = function() {
+	      return this.each(function(){
+	        var container = $(this),
+	            items = container.find('li'),
+	            itemHeaders = items.find('.schedule');
+	        // items.each(function() {
+	        //   $(this).contents(':not(h3)').wrapAll("<div class='content'></div>");
+	        // });
+	        items.find('.speaker-full').hide();
+	        itemHeaders.click(function(e) {
+	          var content = items.find('.expanded');
+	          if ($(this).attr('class') !== 'active') {
+	            content.slideUp()
+	            $(this).parent('li').find('.expanded').slideToggle();
+	            itemHeaders.removeClass('active');
+	            $(this).addClass('active');
+	          } else {
+	            $(this).parent('li').find('.expanded').slideUp();
+	            $(this).removeClass('active');
+	          }
+	          e.preventDefault();
+	        });
+
+
+	      });
+	    };
+
+	  })(jQuery);
+	</script>
+
+
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -49,9 +90,6 @@
 			<header class="header" role="banner">
 
 		      <a class="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory');?>/library/images/mtp-logo.png" alt="<?php bloginfo('name'); ?>" /></a>
-
-
-
 
 					<nav role="navigation">
 						<?php bones_main_nav(); ?>

@@ -235,6 +235,11 @@ footer{
 				opacity: 0.6;
 			}
 		}
+		.designed-by{
+			img{
+				margin: 10px;
+			}
+		}
 	}
 	h1{
 		margin: 0 auto;
@@ -251,6 +256,17 @@ footer{
     }
     div{
       margin: 30px 0;
+      &.designed-by{
+      	margin-top: 100px;
+      	opacity: 0.8;
+      	h5{
+					margin: 0;
+				}
+				img{
+					width: 40px;
+					height: 40px;
+				}
+      }
     }
     &.post-19{
       a{
@@ -319,7 +335,6 @@ form.validate{
 	text-align: center;
 	position: relative;
 	margin: 0 auto;
-	max-width: 1050px;
 	ul{
 		margin: 60px 30px;
 		overflow: hidden;
@@ -327,11 +342,11 @@ form.validate{
 			position: relative;
 			text-align: left;
 			overflow: hidden;
-			margin: 20px 0;
+			margin: 0;
 			.content{
-				margin: 0 0 0 70px;
+				margin: 0;
 				float: left;
-				width: 60%;
+				width: 85%;
 				p{
 					padding: 15px 0 10px;
 					max-width: 450px;
@@ -357,7 +372,7 @@ form.validate{
 				margin: 0;
 			}
 			img{
-				width: 30%;
+				width: 60%;
 				float: left;
 				@include rounded(50%);
 				border: 8px solid rgba(98,173,236,0.3);
@@ -366,7 +381,7 @@ form.validate{
 			time{
 				position: absolute;
 				top: 0px;
-				left: 29%;
+				left: 10px;
 				float: left;
 				width: 90px;
 				font-size: 130%;
@@ -374,12 +389,13 @@ form.validate{
 				text-justify: inter-ideograph;
 			}
 			.schedule{
-				margin: 2px 0 0px 30%;
+				margin: 2px 0 10px 80px;
 				overflow: hidden;
-				display: none;
+				&.active{
+					display: none;
+				}
 				h5{
 					padding-right: 10px;
-					display: inline;
 					font-weight: 600;
 					color: rgba(255,255,255, 0.7);
 					a{
@@ -387,11 +403,7 @@ form.validate{
 					}
 				}
 				p{
-					display: inline;
-					line-height: 2.5;
-				}
-				time{
-					margin-top: 10px;
+					line-height: 1.5;
 				}
 			}
 		}
@@ -400,6 +412,10 @@ form.validate{
 		padding: 50px 0;
 		position: relative;
 		overflow: hidden;
+		display: none;
+		visibility:hidden;
+		opacity:0;
+		transition:visibility 0s linear 0.5s,opacity 0.5s linear;
 		time{
 			margin-top: 50px;
 		}
@@ -409,14 +425,22 @@ form.validate{
 	}
 }
 
+.schedule.active + .expanded{
+	visibility:visible;
+  opacity:1;
+  transition-delay:0s;
+}
+
 .top-nav{
 	margin: 0 auto;
 	text-align: center;
 	ul{
-
 		li{
 			display: inline-block;
 			margin: 0 15px;
+			&:first-child{
+				display: none;
+			}
 			&.current_page_item{
 				a{
 					font-weight: bold;
@@ -448,7 +472,7 @@ form.validate{
 	div{
 		article{
 			padding-left: 50px;
-			background: url(../images/map/0.png) no-repeat 8px 32px;
+			background: url(../images/map/0.png) no-repeat 8px 37px;
 			background-size: 27px 28px;
 			&:nth-child(2){
 				background-image: url(../images/map/1.png);
@@ -484,6 +508,7 @@ form.validate{
 	h4{
 		margin: 5px 0;
 		line-height: 1.25;
+		font-size: 30px;
 	}
 	address{
 		font-style: normal;

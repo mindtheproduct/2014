@@ -395,6 +395,26 @@ LAYOUT & GRID STYLES
   .blog-main h1 {
     text-align: center; }
 
+.speaker-schedule {
+  max-width: 730px; }
+  .speaker-schedule ul li .schedule {
+    margin-left: 30%; }
+    .speaker-schedule ul li .schedule p {
+      display: inline;
+      line-height: 2.5; }
+  .speaker-schedule ul li .content {
+    margin-left: 70px;
+    width: 60%; }
+    .speaker-schedule ul li .content h5 {
+      display: inline; }
+    .speaker-schedule ul li .content h4 {
+      margin-top: 10px; }
+  .speaker-schedule ul li img {
+    width: 30%; }
+  .speaker-schedule ul li time {
+    left: 29%;
+    top: 8px; }
+
 .content-main {
   width: 720px; }
   .content-main p {
@@ -412,6 +432,9 @@ LAYOUT & GRID STYLES
     float: left; }
     .blog-home div article:last-child, .locations div article:last-child {
       margin-right: 0; }
+
+.speaker-schedule {
+  max-width: 1050px; }
 
 /* 
 you can call the larger styles if you want, but there's really no need 

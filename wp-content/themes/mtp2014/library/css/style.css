@@ -740,6 +740,8 @@ footer {
       font-size: 100%;
       margin: 0 auto 40px;
       opacity: 0.6; }
+  .content-main .entry-content .designed-by img {
+    margin: 10px; }
   .content-main h1 {
     margin: 0 auto;
     padding: 20px; }
@@ -751,6 +753,14 @@ footer {
     text-decoration: underline; }
   .content-main article div {
     margin: 30px 0; }
+    .content-main article div.designed-by {
+      margin-top: 100px;
+      opacity: 0.8; }
+      .content-main article div.designed-by h5 {
+        margin: 0; }
+      .content-main article div.designed-by img {
+        width: 40px;
+        height: 40px; }
   .content-main article.post-19 a {
     text-decoration: none; }
 
@@ -801,8 +811,7 @@ form.validate {
   padding: 30px 0;
   text-align: center;
   position: relative;
-  margin: 0 auto;
-  max-width: 1050px; }
+  margin: 0 auto; }
   .speaker-schedule ul {
     margin: 60px 30px;
     overflow: hidden; }
@@ -810,11 +819,11 @@ form.validate {
       position: relative;
       text-align: left;
       overflow: hidden;
-      margin: 20px 0; }
+      margin: 0; }
       .speaker-schedule ul li .content {
-        margin: 0 0 0 70px;
+        margin: 0;
         float: left;
-        width: 60%; }
+        width: 85%; }
         .speaker-schedule ul li .content p {
           padding: 15px 0 10px;
           max-width: 450px;
@@ -833,7 +842,7 @@ form.validate {
         text-transform: uppercase;
         margin: 0; }
       .speaker-schedule ul li img {
-        width: 30%;
+        width: 60%;
         float: left;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -842,36 +851,42 @@ form.validate {
       .speaker-schedule ul li time {
         position: absolute;
         top: 0px;
-        left: 29%;
+        left: 10px;
         float: left;
         width: 90px;
         font-size: 130%;
         text-align: justify;
         text-justify: inter-ideograph; }
       .speaker-schedule ul li .schedule {
-        margin: 2px 0 0px 30%;
-        overflow: hidden;
-        display: none; }
+        margin: 2px 0 10px 80px;
+        overflow: hidden; }
+        .speaker-schedule ul li .schedule.active {
+          display: none; }
         .speaker-schedule ul li .schedule h5 {
           padding-right: 10px;
-          display: inline;
           font-weight: 600;
           color: rgba(255, 255, 255, 0.7); }
           .speaker-schedule ul li .schedule h5 a {
             padding: none; }
         .speaker-schedule ul li .schedule p {
-          display: inline;
-          line-height: 2.5; }
-        .speaker-schedule ul li .schedule time {
-          margin-top: 10px; }
+          line-height: 1.5; }
   .speaker-schedule .expanded {
     padding: 50px 0;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear; }
     .speaker-schedule .expanded time {
       margin-top: 50px; }
   .speaker-schedule a.close {
     display: none; }
+
+.schedule.active + .expanded {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s; }
 
 .top-nav {
   margin: 0 auto;
@@ -879,6 +894,8 @@ form.validate {
   .top-nav ul li {
     display: inline-block;
     margin: 0 15px; }
+    .top-nav ul li:first-child {
+      display: none; }
     .top-nav ul li.current_page_item a {
       font-weight: bold;
       opacity: 1;
@@ -905,7 +922,7 @@ form.validate {
 
 .locations div article {
   padding-left: 50px;
-  background: url(../images/map/0.png) no-repeat 8px 32px;
+  background: url(../images/map/0.png) no-repeat 8px 37px;
   background-size: 27px 28px; }
   .locations div article:nth-child(2) {
     background-image: url(../images/map/1.png); }
@@ -931,7 +948,8 @@ form.validate {
   text-align: center; }
   .map-popup h4 {
     margin: 5px 0;
-    line-height: 1.25; }
+    line-height: 1.25;
+    font-size: 30px; }
   .map-popup address {
     font-style: normal;
     margin-bottom: 20px; }
@@ -1172,7 +1190,27 @@ you can add resource intensive styles.
   .blog-main {
     width: 700px; }
     .blog-main h1 {
-      text-align: center; } }
+      text-align: center; }
+
+  .speaker-schedule {
+    max-width: 730px; }
+    .speaker-schedule ul li .schedule {
+      margin-left: 30%; }
+      .speaker-schedule ul li .schedule p {
+        display: inline;
+        line-height: 2.5; }
+    .speaker-schedule ul li .content {
+      margin-left: 70px;
+      width: 60%; }
+      .speaker-schedule ul li .content h5 {
+        display: inline; }
+      .speaker-schedule ul li .content h4 {
+        margin-top: 10px; }
+    .speaker-schedule ul li img {
+      width: 30%; }
+    .speaker-schedule ul li time {
+      left: 29%;
+      top: 8px; } }
 /*
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -1196,7 +1234,10 @@ you can add resource intensive styles.
       display: block;
       float: left; }
       .blog-home div article:last-child, .locations div article:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+
+  .speaker-schedule {
+    max-width: 1050px; } }
 /*
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

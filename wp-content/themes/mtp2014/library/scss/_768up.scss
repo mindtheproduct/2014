@@ -89,3 +89,35 @@ LAYOUT & GRID STYLES
     text-align: center;
   }
 }
+
+.speaker-schedule{
+  max-width: 730px;
+  ul{
+    li{
+      .schedule{
+        margin-left: 30%;
+        p{
+          display: inline;
+          line-height: 2.5;
+        }
+      }
+      .content{
+        margin-left: 70px;
+        width: 60%;
+        h5{
+          display: inline;
+        }
+        h4{
+          margin-top: 10px;
+        }
+      }
+      img{
+        width: 30%;
+      }
+      time{
+        left: 29%;
+        top: 8px;
+      }
+    }
+  }
+}
