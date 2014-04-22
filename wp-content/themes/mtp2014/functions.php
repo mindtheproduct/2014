@@ -35,6 +35,7 @@ require_once( 'library/social-post-type.php' );
 require_once( 'library/sponsors-post-type.php' );
 require_once( 'library/speakers-post-type.php' );
 require_once( 'library/locations-post-type.php' );
+require_once( 'library/workshops-post-type.php' );
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets

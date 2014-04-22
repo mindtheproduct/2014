@@ -957,6 +957,13 @@ form.validate {
       .map-popup address a:hover {
         color: #284c69; }
 
+.map,
+.map > div.gm-style,
+.map > div.gm-style > div:first-child,
+.map > div.gm-style > div:first-child > div > div:last-child,
+.map > div.gm-style > div:first-child > div > div:last-child * {
+  -webkit-transform: none !important; }
+
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

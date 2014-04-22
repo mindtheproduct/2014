@@ -164,7 +164,7 @@ Template Name: Locations
     </div>
 </div>
    
-<section id="locations-map" style="height:600px;width:100%;background-color: transparent;"></section>
+<section id="locations-map" class="map" style="height:600px;width:100%;"></section>
   <section class="locations">
     <div>
       <?php

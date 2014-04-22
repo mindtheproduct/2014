@@ -519,3 +519,15 @@ form.validate{
 		}
 	}
 }
+
+.map,
+.map > div.gm-style,
+.map > div.gm-style > div:first-child,
+.map > div.gm-style > div:first-child > div > div:last-child,
+.map > div.gm-style > div:first-child > div > div:last-child * {
+    -webkit-transform: none!important;
+}
+
+// .map *, .map *:before, .map *:after {
+//    -webkit-transform: none !important; 
+// }

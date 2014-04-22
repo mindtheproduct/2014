@@ -20,21 +20,21 @@ function speakers() {
 	register_post_type( 'speakers', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'speakers', 'bonestheme' ), /* This is the Title of the Group */
+			'name' => __( 'Speakers', 'bonestheme' ), /* This is the Title of the Group */
 			'singular_name' => __( 'Custom Post', 'bonestheme' ), /* This is the individual type */
 			'all_items' => __( 'All speakers', 'bonestheme' ), /* the all items menu item */
 			'add_new' => __( 'Add New speakers', 'bonestheme' ), /* The add new menu item */
 			'add_new_item' => __( 'Add New speakers', 'bonestheme' ), /* Add New Display Title */
 			'edit' => __( 'Edit', 'bonestheme' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit Sponsors', 'bonestheme' ), /* Edit Display Title */
-			'new_item' => __( 'New Sponsor', 'bonestheme' ), /* New Display Title */
-			'view_item' => __( 'View Sponsor', 'bonestheme' ), /* View Display Title */
-			'search_items' => __( 'Search Sponsors', 'bonestheme' ), /* Search Custom Type Title */ 
+			'edit_item' => __( 'Edit speakers', 'bonestheme' ), /* Edit Display Title */
+			'new_item' => __( 'New speaker', 'bonestheme' ), /* New Display Title */
+			'view_item' => __( 'View speaker', 'bonestheme' ), /* View Display Title */
+			'search_items' => __( 'Search speakers', 'bonestheme' ), /* Search Custom Type Title */ 
 			'not_found' =>  __( 'Nothing found in the Database.', 'bonestheme' ), /* This displays if there are no entries yet */ 
 			'not_found_in_trash' => __( 'Nothing found in Trash', 'bonestheme' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Spronsors custom post type', 'bonestheme' ), /* Custom Type Description */
+			'description' => __( 'Speakers custom post type', 'bonestheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => true,
