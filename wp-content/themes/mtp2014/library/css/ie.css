@@ -399,21 +399,13 @@ LAYOUT & GRID STYLES
   max-width: 730px; }
   .speaker-schedule ul li .schedule {
     margin-left: 30%; }
-    .speaker-schedule ul li .schedule p {
-      display: inline;
-      line-height: 2.5; }
   .speaker-schedule ul li .content {
-    margin-left: 70px;
-    width: 60%; }
+    margin-left: 30px;
+    width: 50%; }
     .speaker-schedule ul li .content h5 {
       display: inline; }
-    .speaker-schedule ul li .content h4 {
-      margin-top: 10px; }
   .speaker-schedule ul li img {
     width: 30%; }
-  .speaker-schedule ul li time {
-    left: 29%;
-    top: 8px; }
 
 .content-main {
   width: 720px; }

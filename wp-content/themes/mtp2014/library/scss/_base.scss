@@ -342,7 +342,7 @@ form.validate{
 			position: relative;
 			text-align: left;
 			overflow: hidden;
-			margin: 0;
+			margin: 0 0 20px;
 			.content{
 				margin: 0;
 				float: left;
@@ -379,14 +379,11 @@ form.validate{
 
 			}
 			time{
-				position: absolute;
-				top: 0px;
-				left: 10px;
+				height: 30px;
 				float: left;
-				width: 90px;
+				width: 60px;
 				font-size: 130%;
-				text-align: justify;
-				text-justify: inter-ideograph;
+				text-align: right;
 			}
 			.schedule{
 				margin: 2px 0 10px 80px;
@@ -416,9 +413,6 @@ form.validate{
 		visibility:hidden;
 		opacity:0;
 		transition:visibility 0s linear 0.5s,opacity 0.5s linear;
-		time{
-			margin-top: 50px;
-		}
 	}
 	a.close{
 		display: none;

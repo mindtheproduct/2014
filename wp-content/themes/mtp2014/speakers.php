@@ -21,7 +21,10 @@ Template Name: Speakers
 <?php
     $args_1 = array(
       'post_type' => 'speakers', 
-      'posts_per_page' => -1
+      'posts_per_page' => -1,
+      'orderby' => 'meta_value_num',
+      'meta_key' => 'speaker_order',
+      'order' => 'ASC'
     );
     $speakers = new WP_Query($args_1);
     if($speakers->have_posts()) : ?>
@@ -29,22 +32,15 @@ Template Name: Speakers
 
       <ul class="accordion">
         <?php while ($speakers->have_posts()) : $speakers->the_post(); ?>
-        <li>
-          <div class="schedule">
-            <?php if (get_field('schedule_time')) { ?>
-              <time><?php the_field('schedule_time');?></time>
-            <?php } ?>
-            <div class="content">
-              
-            </div>
-          </div>
-        </li>
+
           <li>
 
           <div class="schedule">
-            <?php if (get_field('schedule_time')) { ?>
-                <time><?php the_field('schedule_time');?></time>
+            <time>
+              <?php if (get_field('schedule_time')) { ?>
+                <?php the_field('schedule_time');?>
               <?php } ?>
+            </time>
             <div class="content">
               <?php if (get_field('schedule_name')) { ?>
                 <h5><a href="#"><?php the_field('schedule_name');?></a></h5><!--this is the link that opens up 'expanded' and closes 'schedule'  -->
@@ -61,10 +57,15 @@ Template Name: Speakers
 
 
             <div class="expanded">
-              <img src="<?php bloginfo('template_directory');?>/library/images/face.jpg" alt="name" />
-              <?php if (get_field('schedule_time')) { ?>
-                <time><?php the_field('schedule_time');?></time>
+              <?php if (get_field('speakers_photo')) { ?>
+                <?php $image = wp_get_attachment_image_src(get_field('speakers_photo'), 'thumbnail'); ?>
+                <img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('speakers_photo')) ?>">
               <?php } ?>
+              <time>
+                <?php if (get_field('schedule_time')) { ?>
+                  <?php the_field('schedule_time');?>
+                <?php } ?>
+              </time>
               <div class="content">
                 <h4><?php the_field('schedule_name');?></h4>
                 <p>
@@ -78,7 +79,7 @@ Template Name: Speakers
                 <?php if (get_field('schedule_description')) { ?>
                   <p><?php the_field('schedule_description');?></p>
                 <?php } ?>
-                <a class="close" href="#">close</a><!--this is the link that opens up 'schedule' and closes 'expanded'.  ONly one should open at a time.  -->
+                <a class="close" href="#">close</a>
               </div>
             </div>
           </li>

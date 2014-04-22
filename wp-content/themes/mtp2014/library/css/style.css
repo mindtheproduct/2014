@@ -819,7 +819,7 @@ form.validate {
       position: relative;
       text-align: left;
       overflow: hidden;
-      margin: 0; }
+      margin: 0 0 20px; }
       .speaker-schedule ul li .content {
         margin: 0;
         float: left;
@@ -849,14 +849,11 @@ form.validate {
         border-radius: 50%;
         border: 8px solid rgba(98, 173, 236, 0.3); }
       .speaker-schedule ul li time {
-        position: absolute;
-        top: 0px;
-        left: 10px;
+        height: 30px;
         float: left;
-        width: 90px;
+        width: 60px;
         font-size: 130%;
-        text-align: justify;
-        text-justify: inter-ideograph; }
+        text-align: right; }
       .speaker-schedule ul li .schedule {
         margin: 2px 0 10px 80px;
         overflow: hidden; }
@@ -878,8 +875,6 @@ form.validate {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s linear 0.5s,opacity 0.5s linear; }
-    .speaker-schedule .expanded time {
-      margin-top: 50px; }
   .speaker-schedule a.close {
     display: none; }
 
@@ -1196,21 +1191,13 @@ you can add resource intensive styles.
     max-width: 730px; }
     .speaker-schedule ul li .schedule {
       margin-left: 30%; }
-      .speaker-schedule ul li .schedule p {
-        display: inline;
-        line-height: 2.5; }
     .speaker-schedule ul li .content {
-      margin-left: 70px;
-      width: 60%; }
+      margin-left: 30px;
+      width: 50%; }
       .speaker-schedule ul li .content h5 {
         display: inline; }
-      .speaker-schedule ul li .content h4 {
-        margin-top: 10px; }
     .speaker-schedule ul li img {
-      width: 30%; }
-    .speaker-schedule ul li time {
-      left: 29%;
-      top: 8px; } }
+      width: 30%; } }
 /*
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
