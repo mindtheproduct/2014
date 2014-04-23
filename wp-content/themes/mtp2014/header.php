@@ -40,47 +40,6 @@
 		<script type="text/javascript" src="//use.typekit.net/hba8xtt.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-		<!-- for the accordian -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>
-	  (function(){
-
-	    $(function(){
-	      $('.accordion').accordion();
-	    });
-
-	    // Content accordions
-	    $.fn.accordion = function() {
-	      return this.each(function(){
-	        var container = $(this),
-	            items = container.find('li'),
-	            itemHeaders = items.find('.content');
-	        // items.each(function() {
-	        //   $(this).contents(':not(h3)').wrapAll("<div class='content'></div>");
-	        // });
-	        items.find('.description').hide();
-	        itemHeaders.click(function(e) {
-	          var content = items.find('.description');
-	          if ($(this).attr('class') !== 'active') {
-	            content.slideUp()
-	            $(this).parent('li').find('.description').slideToggle();
-	            itemHeaders.removeClass('active');
-	            $(this).addClass('active');
-	          } else {
-	            $(this).parent('li').find('.description').slideUp();
-	            $(this).removeClass('active');
-	          }
-	          e.preventDefault();
-	        });
-
-
-	      });
-	    };
-
-	  })(jQuery);
-	</script>
-
-
 	</head>
 
 	<body <?php body_class(); ?>>

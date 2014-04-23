@@ -67,6 +67,33 @@ jQuery(document).ready(function($) {
 	
 	
 	// add all your scripts here
+	// Content accordions
+	$.fn.accordion = function() {
+	  return this.each(function(){
+	    var container = $(this),
+	        items = container.find('.content'),
+	        itemHeaders = items.find('h4');
+	    // items.each(function() {
+	    //   $(this).contents(':not(h3)').wrapAll("<div class='content'></div>");
+	    // });
+	    items.find('.description').hide();
+	    itemHeaders.click(function(e) {
+	      var content = items.find('.description');
+	      if ($(this).attr('class') !== 'active') {
+	        content.slideUp()
+	        $(this).parent('div').find('.description').slideToggle();
+	        itemHeaders.removeClass('active');
+	        $(this).addClass('active');
+	      } else {
+	        $(this).parent('div').find('.description').slideUp();
+	        $(this).removeClass('active');
+	      }
+	      e.preventDefault();
+	    });
+	  });
+	};
+
+	$('.accordion').accordion();
 	
  
 }); /* end of as page load scripts */

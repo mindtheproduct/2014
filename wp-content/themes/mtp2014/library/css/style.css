@@ -827,7 +827,7 @@ form.validate {
         .speaker-schedule ul li .content p {
           padding: 22px 0 10px;
           margin: 0; }
-        .speaker-schedule ul li .content.active h4 img {
+        .speaker-schedule ul li .content h4.active img {
           display: inline-block;
           -webkit-transform: rotate(90deg);
           -moz-transform: rotate(90deg);

@@ -62,7 +62,7 @@ Template Name: Speakers
                   <?php } ?>
                 </p>
                 <?php if (get_field('schedule_description')) { ?>
-                  <p class="description"><?php the_field('schedule_description');?></p>
+                  <div class="description"><?php the_field('schedule_description');?></div>
                 <?php } ?>
                 <a class="close" href="#">close</a>
               </div>
