@@ -395,8 +395,8 @@ LAYOUT & GRID STYLES
   .blog-main h1 {
     text-align: center; }
 
-.speaker-schedule {
-  max-width: 730px; }
+.speaker-schedule ul li {
+  max-width: 700px; }
   .speaker-schedule ul li .schedule {
     margin-left: 30%; }
   .speaker-schedule ul li .content {
@@ -404,8 +404,6 @@ LAYOUT & GRID STYLES
     width: 50%; }
     .speaker-schedule ul li .content h5 {
       display: inline; }
-  .speaker-schedule ul li img {
-    width: 30%; }
 
 .content-main {
   width: 720px; }

@@ -35,31 +35,9 @@ Template Name: Workshops
 
           <li>
 
-          <div class="schedule">
-            <time>
-              <?php if (get_field('schedule_time')) { ?>
-                <?php the_field('schedule_time');?>
-              <?php } ?>
-            </time>
-            <div class="content">
-              <?php if (get_field('schedule_name')) { ?>
-                <h5><a href="#"><?php the_field('schedule_name');?></a></h5><!--this is the link that opens up 'expanded' and closes 'schedule'  -->
-              <?php } ?>
-              <?php if (get_field('schedule_other_category')) { ?>
-                <h5><?php the_field('schedule_other_category');?></h5>
-              <?php } ?>
-              <?php if (get_field('schedule_position')) { ?>
-                <p><?php the_field('schedule_position');?></p>
-              <?php } ?>
-            </div>
-          </div>
-
-
-
-            <div class="expanded">
               <?php if (get_field('speakers_photo')) { ?>
                 <?php $image = wp_get_attachment_image_src(get_field('speakers_photo'), 'thumbnail'); ?>
-                <img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('speakers_photo')) ?>">
+                <img class="photo" src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('speakers_photo')) ?>">
               <?php } ?>
               <time>
                 <?php if (get_field('schedule_time')) { ?>
@@ -67,7 +45,10 @@ Template Name: Workshops
                 <?php } ?>
               </time>
               <div class="content">
-                <h4><?php the_field('schedule_name');?></h4>
+                <h4><a href="#"><?php the_field('schedule_name');?></a><img src="<?php bloginfo('template_directory');?>/library/images/arrow.png" /></h4>
+                <?php if (get_field('schedule_other_category')) { ?>
+                  <br /><h4><?php the_field('schedule_other_category');?></h4>
+                <?php } ?>
                 <p>
                   <?php if (get_field('schedule_position')) { ?>
                     <?php the_field('schedule_position');?><br />
@@ -77,11 +58,10 @@ Template Name: Workshops
                   <?php } ?>
                 </p>
                 <?php if (get_field('schedule_description')) { ?>
-                  <p><?php the_field('schedule_description');?></p>
+                  <p class="description"><?php the_field('schedule_description');?></p>
                 <?php } ?>
                 <a class="close" href="#">close</a>
               </div>
-            </div>
           </li>
         <?php endwhile; ?>
 

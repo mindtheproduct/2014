@@ -54,20 +54,20 @@
 	      return this.each(function(){
 	        var container = $(this),
 	            items = container.find('li'),
-	            itemHeaders = items.find('.schedule');
+	            itemHeaders = items.find('.content');
 	        // items.each(function() {
 	        //   $(this).contents(':not(h3)').wrapAll("<div class='content'></div>");
 	        // });
-	        items.find('.speaker-full').hide();
+	        items.find('.description').hide();
 	        itemHeaders.click(function(e) {
-	          var content = items.find('.expanded');
+	          var content = items.find('.description');
 	          if ($(this).attr('class') !== 'active') {
 	            content.slideUp()
-	            $(this).parent('li').find('.expanded').slideToggle();
+	            $(this).parent('li').find('.description').slideToggle();
 	            itemHeaders.removeClass('active');
 	            $(this).addClass('active');
 	          } else {
-	            $(this).parent('li').find('.expanded').slideUp();
+	            $(this).parent('li').find('.description').slideUp();
 	            $(this).removeClass('active');
 	          }
 	          e.preventDefault();

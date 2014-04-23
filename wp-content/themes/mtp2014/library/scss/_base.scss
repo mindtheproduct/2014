@@ -342,15 +342,22 @@ form.validate{
 			position: relative;
 			text-align: left;
 			overflow: hidden;
-			margin: 0 0 20px;
-			.content{
+      margin: 0 auto 50px;			
+      .content{
 				margin: 0;
 				float: left;
 				width: 85%;
 				p{
-					padding: 15px 0 10px;
-					max-width: 450px;
+					padding: 22px 0 10px;
 					margin: 0;
+				}
+				&.active h4 img{
+					display: inline-block;
+					-webkit-transform: rotate(90deg);
+				  -moz-transform: rotate(90deg);
+				  -o-transform: rotate(90deg);
+				  -ms-transform: rotate(90deg);
+				  transform: rotate(90deg);
 				}
 			}
 			p{
@@ -366,13 +373,26 @@ form.validate{
 				text-transform: uppercase;
 				margin: 0;
 				font-size: 190%;
+				img{
+					content: url(../images/arrow.png);
+					width: 13px;
+					height: 20px;
+					margin-left: 20px;
+					-webkit-transition: all 0.5s ease-in-out;
+				  -moz-transition: all 0.5s ease-in-out;
+				  -o-transition: all 0.5s ease-in-out;
+				  transition: all 0.5s ease-in-out;
+					&:hover{
+						cursor: pointer;
+					}
+				}
 			}
 			h5{
 				text-transform: uppercase;
 				margin: 0;
 			}
-			img{
-				width: 60%;
+			img.photo{
+				width: 120px;
 				float: left;
 				@include rounded(50%);
 				border: 8px solid rgba(98,173,236,0.3);
@@ -385,44 +405,11 @@ form.validate{
 				font-size: 130%;
 				text-align: right;
 			}
-			.schedule{
-				margin: 2px 0 10px 80px;
-				overflow: hidden;
-				&.active{
-					display: none;
-				}
-				h5{
-					padding-right: 10px;
-					font-weight: 600;
-					color: rgba(255,255,255, 0.7);
-					a{
-						padding: none;
-					}
-				}
-				p{
-					line-height: 1.5;
-				}
-			}
 		}
-	}
-	.expanded{
-		padding: 50px 0;
-		position: relative;
-		overflow: hidden;
-		display: none;
-		visibility:hidden;
-		opacity:0;
-		transition:visibility 0s linear 0.5s,opacity 0.5s linear;
 	}
 	a.close{
 		display: none;
 	}
-}
-
-.schedule.active + .expanded{
-	visibility:visible;
-  opacity:1;
-  transition-delay:0s;
 }
 
 .top-nav{

@@ -819,15 +819,21 @@ form.validate {
       position: relative;
       text-align: left;
       overflow: hidden;
-      margin: 0 0 20px; }
+      margin: 0 auto 50px; }
       .speaker-schedule ul li .content {
         margin: 0;
         float: left;
         width: 85%; }
         .speaker-schedule ul li .content p {
-          padding: 15px 0 10px;
-          max-width: 450px;
+          padding: 22px 0 10px;
           margin: 0; }
+        .speaker-schedule ul li .content.active h4 img {
+          display: inline-block;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
       .speaker-schedule ul li p a {
         text-transform: none;
         background: none;
@@ -838,11 +844,22 @@ form.validate {
         text-transform: uppercase;
         margin: 0;
         font-size: 190%; }
+        .speaker-schedule ul li h4 img {
+          content: url(../images/arrow.png);
+          width: 13px;
+          height: 20px;
+          margin-left: 20px;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out; }
+          .speaker-schedule ul li h4 img:hover {
+            cursor: pointer; }
       .speaker-schedule ul li h5 {
         text-transform: uppercase;
         margin: 0; }
-      .speaker-schedule ul li img {
-        width: 60%;
+      .speaker-schedule ul li img.photo {
+        width: 120px;
         float: left;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -854,34 +871,8 @@ form.validate {
         width: 60px;
         font-size: 130%;
         text-align: right; }
-      .speaker-schedule ul li .schedule {
-        margin: 2px 0 10px 80px;
-        overflow: hidden; }
-        .speaker-schedule ul li .schedule.active {
-          display: none; }
-        .speaker-schedule ul li .schedule h5 {
-          padding-right: 10px;
-          font-weight: 600;
-          color: rgba(255, 255, 255, 0.7); }
-          .speaker-schedule ul li .schedule h5 a {
-            padding: none; }
-        .speaker-schedule ul li .schedule p {
-          line-height: 1.5; }
-  .speaker-schedule .expanded {
-    padding: 50px 0;
-    position: relative;
-    overflow: hidden;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s linear 0.5s,opacity 0.5s linear; }
   .speaker-schedule a.close {
     display: none; }
-
-.schedule.active + .expanded {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s; }
 
 .top-nav {
   margin: 0 auto;
@@ -1194,17 +1185,15 @@ you can add resource intensive styles.
     .blog-main h1 {
       text-align: center; }
 
-  .speaker-schedule {
-    max-width: 730px; }
+  .speaker-schedule ul li {
+    max-width: 700px; }
     .speaker-schedule ul li .schedule {
       margin-left: 30%; }
     .speaker-schedule ul li .content {
       margin-left: 30px;
       width: 50%; }
       .speaker-schedule ul li .content h5 {
-        display: inline; }
-    .speaker-schedule ul li img {
-      width: 30%; } }
+        display: inline; } }
 /*
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and

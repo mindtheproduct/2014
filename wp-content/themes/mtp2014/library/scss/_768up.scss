@@ -91,9 +91,9 @@ LAYOUT & GRID STYLES
 }
 
 .speaker-schedule{
-  max-width: 730px;
   ul{
     li{
+      max-width: 700px;
       .schedule{
         margin-left: 30%;
       }
@@ -103,9 +103,6 @@ LAYOUT & GRID STYLES
         h5{
           display: inline;
         }
-      }
-      img{
-        width: 30%;
       }
     }
   }
