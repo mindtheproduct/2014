@@ -34,20 +34,24 @@ Template Name: Speakers
         <?php while ($speakers->have_posts()) : $speakers->the_post(); ?>
 
           <li>
-
+            <div class="time-image">
+              
+                <?php if (get_field('schedule_time')) { ?>
+                  <time>
+                  <?php the_field('schedule_time');?>
+                  </time>
+                <?php } ?>
+              
               <?php if (get_field('speakers_photo')) { ?>
                 <?php $image = wp_get_attachment_image_src(get_field('speakers_photo'), 'thumbnail'); ?>
                 <img class="photo" src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('speakers_photo')) ?>">
               <?php } ?>
-              <time>
-                <?php if (get_field('schedule_time')) { ?>
-                  <?php the_field('schedule_time');?>
-                <?php } ?>
-              </time>
+            </div>
+              
               <div class="content">
                 <h4><a href="#"><?php the_field('schedule_name');?></a><img src="<?php bloginfo('template_directory');?>/library/images/arrow.png" /></h4>
                 <?php if (get_field('schedule_other_category')) { ?>
-                  <h5><?php the_field('schedule_other_category');?></h5>
+                  <h4><?php the_field('schedule_other_category');?></h4>
                 <?php } ?>
                 <p>
                   <?php if (get_field('schedule_position')) { ?>

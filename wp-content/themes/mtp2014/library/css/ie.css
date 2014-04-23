@@ -396,12 +396,10 @@ LAYOUT & GRID STYLES
     text-align: center; }
 
 .speaker-schedule ul li {
-  max-width: 700px; }
-  .speaker-schedule ul li .schedule {
-    margin-left: 30%; }
+  max-width: 730px; }
   .speaker-schedule ul li .content {
-    margin-left: 30px;
-    width: 50%; }
+    margin-left: 40px;
+    width: 60%; }
     .speaker-schedule ul li .content h5 {
       display: inline; }
 

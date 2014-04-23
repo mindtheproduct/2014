@@ -34,20 +34,23 @@ Template Name: Workshops
         <?php while ($workshops->have_posts()) : $workshops->the_post(); ?>
 
           <li>
-
-              <?php if (get_field('speakers_photo')) { ?>
-                <?php $image = wp_get_attachment_image_src(get_field('speakers_photo'), 'thumbnail'); ?>
-                <img class="photo" src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('speakers_photo')) ?>">
-              <?php } ?>
-              <time>
+                
+              <div class="time-image">
                 <?php if (get_field('schedule_time')) { ?>
+                <time>
                   <?php the_field('schedule_time');?>
+                  </time>
                 <?php } ?>
-              </time>
+              
+                <?php if (get_field('speakers_photo')) { ?>
+                  <?php $image = wp_get_attachment_image_src(get_field('speakers_photo'), 'thumbnail'); ?>
+                  <img class="photo" src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('speakers_photo')) ?>">
+                <?php } ?>
+              </div>
               <div class="content">
                 <h4><a href="#"><?php the_field('schedule_name');?></a><img src="<?php bloginfo('template_directory');?>/library/images/arrow.png" /></h4>
                 <?php if (get_field('schedule_other_category')) { ?>
-                  <br /><h4><?php the_field('schedule_other_category');?></h4>
+                  <h4><?php the_field('schedule_other_category');?></h4>
                 <?php } ?>
                 <p>
                   <?php if (get_field('schedule_position')) { ?>

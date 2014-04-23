@@ -855,19 +855,24 @@ form.validate {
           transition: all 0.5s ease-in-out; }
           .speaker-schedule ul li h4 img:hover {
             cursor: pointer; }
+      .speaker-schedule ul li h4 + h4 {
+        margin-top: 30px; }
       .speaker-schedule ul li h5 {
         text-transform: uppercase;
         margin: 0; }
+      .speaker-schedule ul li .time-image {
+        width: auto;
+        float: left; }
       .speaker-schedule ul li img.photo {
-        width: 120px;
-        float: left;
+        width: 140px;
+        float: right;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
         border: 8px solid rgba(98, 173, 236, 0.3); }
       .speaker-schedule ul li time {
         height: 30px;
-        float: left;
+        float: right;
         width: 60px;
         font-size: 130%;
         text-align: right; }
@@ -1186,12 +1191,10 @@ you can add resource intensive styles.
       text-align: center; }
 
   .speaker-schedule ul li {
-    max-width: 700px; }
-    .speaker-schedule ul li .schedule {
-      margin-left: 30%; }
+    max-width: 730px; }
     .speaker-schedule ul li .content {
-      margin-left: 30px;
-      width: 50%; }
+      margin-left: 40px;
+      width: 60%; }
       .speaker-schedule ul li .content h5 {
         display: inline; } }
 /*
