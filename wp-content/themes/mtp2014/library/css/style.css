@@ -838,7 +838,8 @@ form.validate {
           padding: 22px 0 10px;
           margin: 0; }
         .speaker-schedule ul li .content .description {
-          text-align: left; }
+          text-align: left;
+          padding: 5px 0 30px; }
         .speaker-schedule ul li .content h4.active img {
           display: inline-block;
           -webkit-transform: rotate(90deg);
