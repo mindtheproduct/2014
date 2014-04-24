@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
 	
 	/* if is below 481px */
 	if (responsive_viewport < 481) {
-	
+		$('.nav li:nth-child(2)>a').html('Conf');
 	} /* end smallest screen */
 	
 	/* if is larger than 481px */
@@ -54,9 +54,9 @@ jQuery(document).ready(function($) {
 	if (responsive_viewport >= 768) {
 	
 		/* load gravatars */
-		$('.comment img[data-gravatar]').each(function(){
-			$(this).attr('src',$(this).attr('data-gravatar'));
-		});
+		// $('.comment img[data-gravatar]').each(function(){
+		// 	$(this).attr('src',$(this).attr('data-gravatar'));
+		// });
 		
 	}
 	
@@ -64,6 +64,14 @@ jQuery(document).ready(function($) {
 	if (responsive_viewport > 1030) {
 	
 	}
+
+	$(window).resize(function() {
+		if ($(window).width() < 481) {
+			$('.nav li:nth-child(2)>a').html('Conf');
+		} else {
+			$('.nav li:nth-child(2)>a').html('Conference');
+		}
+	});
 	
 	
 	// add all your scripts here

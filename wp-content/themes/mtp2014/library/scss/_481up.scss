@@ -42,21 +42,17 @@ NAVIGATION STYLES
 	margin: 0 auto 30px;
 	text-align: center;
 	ul{
-		float: none;
-		background: none;
 		li{
 			width: auto;
 			float: none;
 			display: inline-block;
 			margin: 0 20px;
-			background: none;
 			&:first-child{
 				display: none;
 			}
 			&.current_page_item{
 				a{
-					background: url(../images/menu.png) no-repeat 50% 100%;
-					padding-left: 0;
+					
 				}
 			}
 		}
