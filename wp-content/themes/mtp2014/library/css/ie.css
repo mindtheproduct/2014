@@ -303,6 +303,8 @@ NAVIGATION STYLES
     margin: 0 20px; }
     .top-nav ul li:first-child {
       display: none; }
+    .top-nav ul li a {
+      font-size: 95%; }
 
 /*********************
 POSTS & CONTENT STYLES

@@ -902,8 +902,7 @@ form.validate {
   text-align: center; }
   .top-nav ul li {
     width: auto;
-    display: inline-block;
-    margin: 0 2px; }
+    display: inline-block; }
     .top-nav ul li:first-child {
       display: none;
       margin: 0; }
@@ -914,8 +913,9 @@ form.validate {
     .top-nav ul li a {
       background: none;
       font-weight: normal;
-      font-size: 90%;
-      opacity: 0.8; }
+      font-size: 80%;
+      opacity: 0.8;
+      padding: 10px 6px; }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.9);
@@ -1030,6 +1030,8 @@ tweeners.
       margin: 0 20px; }
       .top-nav ul li:first-child {
         display: none; }
+      .top-nav ul li a {
+        font-size: 95%; }
 
   /*********************
   POSTS & CONTENT STYLES

@@ -443,7 +443,6 @@ form.validate{
 		li{
 			width: auto;
 			display: inline-block;
-			margin: 0 2px;
 			&:first-child{
 				display: none;
 				margin: 0;
@@ -458,8 +457,9 @@ form.validate{
 			a{
 				background: none;
 				font-weight: normal;
-				font-size: 90%;
+				font-size: 80%;
 				opacity: 0.8;
+				padding: 10px 6px;
 			}
 		}
 	}
