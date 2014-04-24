@@ -762,7 +762,9 @@ footer {
     padding: 20px 20px 0; }
   .content-main article a {
     background: url(../images/underline_small.png) repeat-x 0 75%;
-    text-decoration: none; }
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px; }
   .content-main article div {
     margin: 30px 0; }
     .content-main article div.designed-by {
