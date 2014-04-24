@@ -754,8 +754,9 @@ footer {
     margin: 0 auto;
     padding: 20px 20px 0; }
   .content-main article a {
-    background: none;
-    text-decoration: underline; }
+    background: url(../images/underline_small.png) repeat-x 0 75%;
+    text-decoration: none;
+    text-transform: none; }
   .content-main article div {
     margin: 30px 0; }
     .content-main article div.designed-by {
