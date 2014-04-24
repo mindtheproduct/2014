@@ -174,7 +174,7 @@ Template Name: Locations
         
           <article>
             <h5><a href="<?php the_field("directions_link"); ?>"><?php the_title(); ?></a></h5>
-            <p><?php the_field("address"); ?>, <?php the_field("post_code"); ?><br />
+            <p><?php the_field("address"); ?><br /> <?php the_field("post_code"); ?><br />
             <?php the_field("location_other_information"); ?></p>
           </article>
         

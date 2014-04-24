@@ -219,6 +219,7 @@ footer{
 		}
 	}
 	.entry-content{
+		padding: 0 30px;
 		img{
 			max-width: 100%;
 			height: auto;
@@ -240,8 +241,11 @@ footer{
 			}
 		}
 		.designed-by{
-			img{
-				margin: 10px;
+			a.capra{
+				background: none;
+				img{
+					margin: 10px;
+				}
 			}
 		}
 	}
@@ -257,7 +261,6 @@ footer{
     a{
       background: url(../images/underline_small.png) repeat-x 0 75%;
       text-decoration: none;
-      text-transform: none;
     }
     div{
       margin: 30px 0;
@@ -345,16 +348,17 @@ form.validate{
 		overflow: hidden;
 		li{
 			position: relative;
-			text-align: left;
+			text-align: center;
 			overflow: hidden;
-      margin: 0 auto 50px;			
+      margin: 0 auto 40px;			
       .content{
 				margin: 0;
-				float: left;
-				width: 85%;
 				p{
 					padding: 22px 0 10px;
 					margin: 0;
+				}
+				.description{
+					text-align: left;
 				}
 				h4.active img{
 					display: inline-block;
@@ -376,13 +380,15 @@ form.validate{
 			}
 			h4{
 				text-transform: uppercase;
-				margin: 0;
-				font-size: 190%;
+				margin: 0 0 0 15px;
+				font-size: 22px;
 				img{
 					content: url(../images/arrow.png);
 					width: 13px;
 					height: 20px;
 					margin-left: 20px;
+					position: relative;
+					top: 4px;
 					-webkit-transition: all 0.5s ease-in-out;
 				  -moz-transition: all 0.5s ease-in-out;
 				  -o-transition: all 0.5s ease-in-out;
@@ -400,21 +406,21 @@ form.validate{
 				margin: 0;
 			}
 			.time-image{
-				width: auto;
-				float: left;
+				text-align: center;
 			}
 			img.photo{
 				width: 140px;
-				float: right;
 				@include rounded(50%);
 				border: 8px solid rgba(98,173,236,0.3);
+				margin-bottom: 30px;
 			}
 			time{
 				height: 30px;
-				float: right;
 				width: 60px;
 				font-size: 130%;
-				text-align: right;
+				position: absolute;
+				top: 143px;
+				left: 40%;
 			}
 		}
 	}

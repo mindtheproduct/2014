@@ -14,7 +14,7 @@
 									<?php the_content(); ?>
 									<?php if ( is_page('About')) {?>
 										<div class="designed-by">
-											<a href="http://thisiscapra.com">
+											<a class="capra" href="http://thisiscapra.com">
 												<img src="<?php bloginfo('template_directory');?>/library/images/capra.png" alt="Capra Limited" />
 											</a>
 											<h5>This site was designed by <a href="http://thisiscapra.com">Capra</a></h5>

@@ -94,11 +94,38 @@ LAYOUT & GRID STYLES
   ul{
     li{
       max-width: 730px;
+      text-align: left;
+      .time-image{
+        width: auto;
+        float: left;
+      }
+      img.photo{
+        width: 140px;
+        float: right;
+        margin-right: 10px;
+        @include rounded(50%);
+        border: 8px solid rgba(98,173,236,0.3);
+      }
+      time{
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 30px;
+        float: right;
+        width: 60px;
+        font-size: 130%;
+        text-align: right;
+      }
       .content{
-        margin-left: 40px;
+        margin-left: 30px;
         width: 60%;
-        h5{
-          display: inline;
+        float: left;
+        h4{
+          font-size: 30px;
+          margin-left: 0;
+          img{
+            top: 0;
+          }
         }
       }
     }
