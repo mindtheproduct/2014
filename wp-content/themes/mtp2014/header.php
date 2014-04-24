@@ -40,6 +40,9 @@
 		<script type="text/javascript" src="//use.typekit.net/hba8xtt.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+		<!--script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/responsive-nav.min.js" /-->
+
+
 	</head>
 
 	<body <?php body_class(); ?>>

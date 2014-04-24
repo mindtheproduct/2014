@@ -669,7 +669,7 @@ a.logo {
   display: block;
   text-align: center;
   padding: 30px 0 20px;
-  margin-top: 50px; }
+  margin-top: 60px; }
   a.logo img {
     text-align: center;
     width: 221px;
@@ -703,8 +703,8 @@ footer {
 .buy {
   background-color: #00aeef;
   margin: 0 auto;
-  text-align: right;
-  padding: 10px;
+  text-align: left;
+  padding: 10px 10px 5px 10px;
   position: absolute;
   top: 0;
   width: 100%;
@@ -716,6 +716,8 @@ footer {
     padding-right: 10px; }
   .buy a {
     position: relative;
+    float: right;
+    display: inline;
     top: -2px; }
 
 .content-main {
@@ -895,20 +897,25 @@ form.validate {
 .top-nav {
   margin: 0 auto;
   text-align: center; }
-  .top-nav ul li {
-    display: inline-block;
-    margin: 0 15px; }
-    .top-nav ul li:first-child {
-      display: none; }
-    .top-nav ul li.current_page_item a {
-      font-weight: bold;
-      opacity: 1;
-      background: url(../images/menu.png) no-repeat 50% 100%; }
-    .top-nav ul li a {
-      background: none;
-      font-weight: normal;
-      font-size: 90%;
-      opacity: 0.8; }
+  .top-nav ul {
+    background: url(../images/underline_small.png) repeat-x 0 0; }
+    .top-nav ul li {
+      display: inline-block;
+      padding: 20px 0 20px;
+      width: 50%;
+      background: url(../images/underline_small.png) repeat-x 0 100%; }
+      .top-nav ul li:first-child {
+        display: none; }
+      .top-nav ul li.current_page_item a {
+        font-weight: bold;
+        opacity: 1;
+        background: url(../images/menu-responsive.png) no-repeat 0 0;
+        padding-left: 15px; }
+      .top-nav ul li a {
+        background: none;
+        font-weight: normal;
+        font-size: 90%;
+        opacity: 0.8; }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.9);
@@ -999,24 +1006,38 @@ tweeners.
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  .menu {
-    /* end .menu ul */ }
-    .menu ul {
-      /* end .menu ul li */
-      /* highlight current page */
-      /* end current highlighters */ }
-      .menu ul li {
-        /*
-        plan your menus and drop-downs wisely.
-        */ }
-        .menu ul li a {
-          /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
-          */ }
+  .a.logo {
+    margin-top: 0; }
 
-  /* end .menu */
+  .buy {
+    padding: 15px 30px 10px; }
+    .buy h1, .buy h3 {
+      font-size: 130%; }
+    .buy h3 {
+      font-weight: bold; }
+    .buy a {
+      position: relative;
+      float: right;
+      top: -2px; }
+
+  .top-nav {
+    margin: 0 auto 30px;
+    text-align: center; }
+    .top-nav ul {
+      float: none;
+      background: none; }
+      .top-nav ul li {
+        width: auto;
+        float: none;
+        display: inline-block;
+        margin: 0 20px;
+        background: none; }
+        .top-nav ul li:first-child {
+          display: none; }
+        .top-nav ul li.current_page_item a {
+          background: url(../images/menu.png) no-repeat 50% 100%;
+          padding-left: 0; }
+
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -1155,6 +1176,9 @@ you can add resource intensive styles.
   *********************/
   .wrap {
     max-width: 1140px; }
+
+  .top-nav ul li {
+    margin: 0 25px; }
 
   .buy {
     position: absolute;

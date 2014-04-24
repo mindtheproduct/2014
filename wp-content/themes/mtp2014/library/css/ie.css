@@ -279,24 +279,38 @@ upon your base.scss styles.
 /*********************
 NAVIGATION STYLES
 *********************/
-/* .menu is clearfixed inside mixins.scss */
-.menu {
-  /* end .menu ul */ }
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .menu ul li {
-      /*
-      plan your menus and drop-downs wisely.
-      */ }
-      .menu ul li a {
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
+.a.logo {
+  margin-top: 0; }
 
-/* end .menu */
+.buy {
+  padding: 15px 30px 10px; }
+  .buy h1, .buy h3 {
+    font-size: 130%; }
+  .buy h3 {
+    font-weight: bold; }
+  .buy a {
+    position: relative;
+    float: right;
+    top: -2px; }
+
+.top-nav {
+  margin: 0 auto 30px;
+  text-align: center; }
+  .top-nav ul {
+    float: none;
+    background: none; }
+    .top-nav ul li {
+      width: auto;
+      float: none;
+      display: inline-block;
+      margin: 0 20px;
+      background: none; }
+      .top-nav ul li:first-child {
+        display: none; }
+      .top-nav ul li.current_page_item a {
+        background: url(../images/menu.png) no-repeat 50% 100%;
+        padding-left: 0; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -347,6 +361,9 @@ LAYOUT & GRID STYLES
 *********************/
 .wrap {
   max-width: 1140px; }
+
+.top-nav ul li {
+  margin: 0 25px; }
 
 .buy {
   position: absolute;
