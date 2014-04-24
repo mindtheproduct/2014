@@ -57,6 +57,9 @@ Template Name: Speakers
                   <?php if (get_field('schedule_position')) { ?>
                     <?php the_field('schedule_position');?><br />
                   <?php } ?>
+                  <?php if (get_field('speaker_other_link')) { ?>
+                    <?php the_field('speaker_other_link');?><br />
+                  <?php } ?>
                   <?php if (get_field('schedule_twitter')) { ?>
                     <a href="http://twitter.com/<?php the_field('schedule_twitter');?>">@<?php the_field('schedule_twitter');?></a>
                   <?php } ?>
