@@ -19,7 +19,7 @@ Template Name: Locations
       function initialize() {
           geocoder = new google.maps.Geocoder();
           bounds = new google.maps.LatLngBounds();
-
+          marker_shape = {coords: [0,0,50,50], type: "rect"};
           var styles = [
             {
               "stylers": [
@@ -28,11 +28,11 @@ Template Name: Locations
               ]
             }
           ]
-
           var myOptions = {
               zoom: 15, 
               mapTypeId: google.maps.MapTypeId.ROADMAP,
               scrollwheel: false,
+              shape: marker_shape,
               navigationControlOptions: {
                   style: google.maps.NavigationControlStyle.SMALL
               },
@@ -104,6 +104,7 @@ Template Name: Locations
                   marker = new google.maps.Marker({
                       map: map,
                       position: results[0].geometry.location,
+                      shape: marker_shape,
                       icon: image
                   });
 
