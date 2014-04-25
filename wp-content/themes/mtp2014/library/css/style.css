@@ -587,6 +587,8 @@ body {
     background-color: rgba(0, 0, 0, 0.6); }
   body.page-template-location-php {
     background-image: url(../images/background-location.jpg); }
+  body.page-template-speakers-php {
+    background-image: url(../images/background-speaker.jpg); }
 
 .wrap {
   width: 96%;
