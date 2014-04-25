@@ -743,6 +743,7 @@ footer {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
+        border: 8px solid #00aeef;
         border: 8px solid rgba(98, 173, 236, 0.3); }
     .content-main .entry-content .wp-caption {
       max-width: 100%; }
@@ -886,6 +887,7 @@ form.validate {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
+        border: 8px solid #00aeef;
         border: 8px solid rgba(98, 173, 236, 0.3);
         margin-bottom: 30px; }
       .speaker-schedule ul li time {

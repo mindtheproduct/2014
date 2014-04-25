@@ -8,9 +8,10 @@ Template Name: Workshops
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <section class="speaker-schedule">
-  
+  <div class="content-main">
 
   <?php the_content(); ?>
+</div>
 
 <?php endwhile; else : ?>
 

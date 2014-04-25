@@ -485,8 +485,32 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
-.lt-ie9 .blog-home div {
+.lt-ie7 .top-nav ul li {
+  display: inline; }
+
+.lt-ie9 .locations div article {
+  background-image: url(../images/map/0-ie.png); }
+  .lt-ie9 .locations div article:nth-child(3) {
+    background-image: url(../images/map/2-ie.png); }
+  .lt-ie9 .locations div article h5 {
+    margin: 0;
+    padding: 0; }
+    .lt-ie9 .locations div article h5 a {
+      line-height: 2.1;
+      display: inline;
+      max-width: 100%; }
+
+.lt-ie9 .locations div article + article {
+  background-image: url(../images/map/1-ie.png); }
+
+.lt-ie9 .locations div article + article + article {
+  background-image: url(../images/map/2-ie.png); }
+
+.lt-ie9 .blog-home div, .lt-ie9 .locations div {
   padding-left: 5%; }
 
-.lt-ie9 .blog-home div article {
+.lt-ie9 .blog-home div article, .lt-ie9 .locations div article {
   width: 28%; }
+
+.lt-ie9 .button, .lt-ie9 .button:visited {
+  top: -5px; }
