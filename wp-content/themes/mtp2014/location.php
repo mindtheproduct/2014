@@ -44,7 +44,7 @@ Template Name: Locations
               if (status == google.maps.GeocoderStatus.OK) {
                   map.setCenter(results[0].geometry.location);
                   var image = {
-                    url: '<?php echo get_template_directory_uri(); ?>/library/images/map/conference.png',
+                    url: '<?php echo get_template_directory_uri(); ?>/library/images/map/conference_location.png',
                     size: new google.maps.Size(51, 52),
                     scaledSize: new google.maps.Size(51, 52)
                   }
