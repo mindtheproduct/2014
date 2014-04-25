@@ -1238,7 +1238,7 @@ you can add resource intensive styles.
       border: 8px solid rgba(98, 173, 236, 0.3); }
     .speaker-schedule ul li time {
       position: relative;
-      top: 0;
+      top: 15px;
       left: 0;
       height: 30px;
       float: right;
@@ -1248,7 +1248,8 @@ you can add resource intensive styles.
     .speaker-schedule ul li .content {
       margin-left: 30px;
       width: 60%;
-      float: left; }
+      float: left;
+      padding-top: 15px; }
       .speaker-schedule ul li .content h4 {
         font-size: 30px;
         margin-left: 0; }
