@@ -35,7 +35,7 @@ function sponsors() {
 			'parent_item_colon' => ''
 			), /* end of arrays */
 			'description' => __( 'Spronsors custom post type', 'bonestheme' ), /* Custom Type Description */
-			'public' => true,
+			'public' => false,
 			'publicly_queryable' => true,
 			'exclude_from_search' => true,
 			'show_ui' => true,

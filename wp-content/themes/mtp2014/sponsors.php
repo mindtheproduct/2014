@@ -52,7 +52,7 @@
     $sponsor_link = new WP_Query($args_3);
     if($sponsor_link->have_posts()) : ?>
         <?php while ($sponsor_link->have_posts()) : $sponsor_link->the_post(); ?>
-            <a href="<?php the_field('sponsoring_link');?>">Interested in sponsoring?</a>
+            <a href="<?php the_title();?>">Interested in sponsoring?</a>
         <?php endwhile; ?>
       </ul>
   <?php endif; ?>
