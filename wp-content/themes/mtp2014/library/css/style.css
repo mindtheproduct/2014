@@ -984,6 +984,10 @@ form.validate {
 .map > div.gm-style > div:first-child > div > div:last-child * {
   -webkit-transform: none !important; }
 
+/*target ie10*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .button, .button:visited {
+    top: -5px; } }
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

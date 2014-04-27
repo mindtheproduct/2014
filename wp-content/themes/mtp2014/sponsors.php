@@ -44,8 +44,19 @@
 
   <?php wp_reset_query(); ?>
 
-  <?php if (get_field('sponsoring_link')) { ?>
-    <a href="<?php the_field('sponsoring_link');?>">Interested in sponsoring?</a>
-  <?php } ?>
+  <?php
+    $args_3 = array(
+      'post_type' => 'sponsors_link', 
+      'posts_per_page' => 1
+    );
+    $sponsor_link = new WP_Query($args_3);
+    if($sponsor_link->have_posts()) : ?>
+        <?php while ($sponsor_link->have_posts()) : $sponsor_link->the_post(); ?>
+            <a href="<?php the_field('sponsoring_link');?>">Interested in sponsoring?</a>
+        <?php endwhile; ?>
+      </ul>
+  <?php endif; ?>
+
+  <?php wp_reset_query(); ?>
 
 </section>

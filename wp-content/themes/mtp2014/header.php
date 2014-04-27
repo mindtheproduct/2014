@@ -43,7 +43,6 @@
 
 		<!--script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/responsive-nav.min.js" /-->
 
-
 	</head>
 
 	<body <?php body_class(); ?>>

@@ -1,6 +1,5 @@
    
     <?php include('sponsors.php'); ?>
-
     <section class="blog-home">
     
     	<div>
