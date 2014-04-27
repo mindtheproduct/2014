@@ -74,6 +74,12 @@ Template Name: Workshops
 
       </ul>
   <?php endif; ?>
+  <?php wp_reset_query(); ?>
+  <div class="content-main">
+    <?php if (get_field('schedule_more_soon')) { ?>
+      <?php the_field('schedule_more_soon');?>
+    <?php } ?>
+  </div>
 </section>
 <?php get_footer(); ?>
               

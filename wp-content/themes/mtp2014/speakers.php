@@ -8,10 +8,10 @@ Template Name: Speakers
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <section class="speaker-schedule">
-  
+  <div class="content-main">
 
-  <?php the_content(); ?>
-
+    <?php the_content(); ?>
+  </div>
 <?php endwhile; else : ?>
 
   <p>Nothing here</p>
@@ -74,6 +74,12 @@ Template Name: Speakers
 
       </ul>
   <?php endif; ?>
+  <?php wp_reset_query(); ?>
+  <div class="content-main">
+    <?php if (get_field('schedule_more_soon')) { ?>
+      <?php the_field('schedule_more_soon');?>
+    <?php } ?>
+  </div>
 </section>
 <?php get_footer(); ?>
               
