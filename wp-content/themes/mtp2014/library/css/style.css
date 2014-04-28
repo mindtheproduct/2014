@@ -666,12 +666,14 @@ p {
   color: #fff;
   margin-bottom: 20px; }
 
+header.header {
+  padding-top: 60px; }
+
 a.logo {
   background-image: none;
   display: block;
   text-align: center;
-  padding: 30px 0 20px;
-  margin-top: 60px; }
+  padding: 30px 0 20px; }
   a.logo img {
     text-align: center;
     width: 221px;
