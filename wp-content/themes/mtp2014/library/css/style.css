@@ -666,9 +666,6 @@ p {
   color: #fff;
   margin-bottom: 20px; }
 
-header.header {
-  padding-top: 60px; }
-
 a.logo {
   background-image: none;
   display: block;
@@ -1029,6 +1026,9 @@ tweeners.
       position: relative;
       float: right;
       top: -2px; }
+
+  header.header {
+    padding-top: 60px; }
 
   .top-nav {
     margin: 0 auto 30px;
