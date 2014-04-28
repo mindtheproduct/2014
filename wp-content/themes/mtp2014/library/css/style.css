@@ -822,7 +822,7 @@ footer {
           max-width: 100px; }
 
 form.validate {
-  margin-top: 50px; }
+  margin-top: 30px; }
 
 .speaker-schedule {
   padding: 30px 0;
@@ -1204,7 +1204,9 @@ you can add resource intensive styles.
     .buy a {
       line-height: 1.1;
       font-size: 109%;
-      text-align: justify; }
+      text-align: justify;
+      float: none;
+      left: 1px; }
 
   .content-main {
     width: 450px; }

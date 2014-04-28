@@ -381,7 +381,9 @@ LAYOUT & GRID STYLES
   .buy a {
     line-height: 1.1;
     font-size: 109%;
-    text-align: justify; }
+    text-align: justify;
+    float: none;
+    left: 1px; }
 
 .content-main {
   width: 450px; }
