@@ -9,8 +9,9 @@ Template Name: Workshops
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <section class="speaker-schedule">
   <div class="content-main">
-
-  <?php the_content(); ?>
+    <div class="entry-content">
+      <?php the_content(); ?>
+    </div>
 </div>
 
 <?php endwhile; else : ?>
@@ -76,9 +77,11 @@ Template Name: Workshops
   <?php endif; ?>
   <?php wp_reset_query(); ?>
   <div class="content-main">
-    <?php if (get_field('schedule_more_soon')) { ?>
-      <?php the_field('schedule_more_soon');?>
-    <?php } ?>
+    <div class="entry-content">
+      <?php if (get_field('schedule_more_soon')) { ?>
+        <?php the_field('schedule_more_soon');?>
+      <?php } ?>
+    </div>
   </div>
 </section>
 <?php get_footer(); ?>
