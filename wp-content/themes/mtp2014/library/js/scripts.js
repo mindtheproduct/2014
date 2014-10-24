@@ -42,7 +42,8 @@ jQuery(document).ready(function($) {
 	
 	/* if is below 481px */
 	if (responsive_viewport < 481) {
-	
+		$('.nav li:nth-child(2)>a').html('Conf');
+		$('.nav li:nth-child(5)>a').html('About');
 	} /* end smallest screen */
 	
 	/* if is larger than 481px */
@@ -54,9 +55,9 @@ jQuery(document).ready(function($) {
 	if (responsive_viewport >= 768) {
 	
 		/* load gravatars */
-		$('.comment img[data-gravatar]').each(function(){
-			$(this).attr('src',$(this).attr('data-gravatar'));
-		});
+		// $('.comment img[data-gravatar]').each(function(){
+		// 	$(this).attr('src',$(this).attr('data-gravatar'));
+		// });
 		
 	}
 	
@@ -64,9 +65,46 @@ jQuery(document).ready(function($) {
 	if (responsive_viewport > 1030) {
 	
 	}
+
+	$(window).resize(function() {
+		if ($(window).width() < 481) {
+			$('.nav li:nth-child(2)>a').html('Conf');
+			$('.nav li:nth-child(5)>a').html('About');
+		} else {
+			$('.nav li:nth-child(2)>a').html('Conference');
+			$('.nav li:nth-child(5)>a').html('About us');
+		}
+	});
 	
 	
 	// add all your scripts here
+	// Content accordions
+	$.fn.accordion = function() {
+	  return this.each(function(){
+	    var container = $(this),
+	        items = container.find('.content'),
+	        itemHeaders = items.find('h4');
+	    // items.each(function() {
+	    //   $(this).contents(':not(h3)').wrapAll("<div class='content'></div>");
+	    // });
+	    items.find('.description').hide();
+	    itemHeaders.click(function(e) {
+	      var content = items.find('.description');
+	      if ($(this).attr('class') !== 'active') {
+	        content.slideUp()
+	        $(this).parent('div').find('.description').slideToggle();
+	        itemHeaders.removeClass('active');
+	        $(this).addClass('active');
+	      } else {
+	        $(this).parent('div').find('.description').slideUp();
+	        $(this).removeClass('active');
+	      }
+	      e.preventDefault();
+	    });
+	  });
+	};
+
+	$('.accordion').accordion();
 	
  
 }); /* end of as page load scripts */

@@ -28,6 +28,13 @@ LAYOUT & GRID STYLES
 }
 
 
+.top-nav {
+  ul li{
+    margin: 0 25px;
+  }
+}
+
+
 .buy{
 	position: absolute;
 	right: 0;
@@ -54,6 +61,8 @@ LAYOUT & GRID STYLES
 		line-height: 1.1;
 		font-size: 109%;
 		text-align: justify;
+    float: none;
+    left: 1px;
 	}
 }
 
@@ -61,7 +70,7 @@ LAYOUT & GRID STYLES
 	width: 450px;
 }
 
-.blog-home{
+.blog-home, .locations{
   div{
     max-width: 750px;
     margin: 0 auto;
@@ -79,9 +88,56 @@ LAYOUT & GRID STYLES
   }
 }
 
+.locations div article{
+  padding: 30px 0 20px 50px;
+}
+
 .blog-main{
   width: 700px;
   h1{
     text-align: center;
+  }
+}
+
+.speaker-schedule{
+  ul{
+    li{
+      max-width: 730px;
+      text-align: left;
+      .time-image{
+        width: auto;
+        float: left;
+      }
+      img.photo{
+        width: 140px;
+        float: right;
+        margin-right: 10px;
+        @include rounded(50%);
+        border: 8px solid rgba(98,173,236,0.3);
+      }
+      time{
+        position: relative;
+        top: 15px;
+        left: 0;
+        height: 30px;
+        float: right;
+        width: 60px;
+        font-size: 130%;
+        text-align: right;
+      }
+      .content{
+        margin-left: 30px;
+        width: 60%;
+        float: left;
+        padding-top: 15px;
+        h4{
+          font-size: 30px;
+          margin-left: 0;
+          img{
+            top: 0;
+          }
+        }
+      }
+    }
   }
 }

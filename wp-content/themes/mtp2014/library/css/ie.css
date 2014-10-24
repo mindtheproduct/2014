@@ -151,7 +151,7 @@ BUTTONS
   background-image: -webkit-linear-gradient(top, #00aeef, #009bd5);
   background-image: -moz-linear-gradient(top, #00aeef, #009bd5);
   background-image: -o-linear-gradient(top, #00aeef, #009bd5);
-  background-image: linear-gradient(to bottom, #00aeef, #009bd5);
+  background-image: linear-gradient(top bottom, #00aeef, #009bd5);
   position: relative;
   top: -2px;
   left: -2px; }
@@ -165,18 +165,18 @@ BUTTONS
     background-image: -webkit-linear-gradient(top, #009bd5, #0089bc);
     background-image: -moz-linear-gradient(top, #009bd5, #0089bc);
     background-image: -o-linear-gradient(top, #009bd5, #0089bc);
-    background-image: linear-gradient(to bottom, #009bd5, #0089bc); }
+    background-image: linear-gradient(top bottom, #009bd5, #0089bc); }
   .button:active, .button:visited:active {
     background-color: #00aeef;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#009bd5), to(#00aeef));
     background-image: -webkit-linear-gradient(top, #009bd5, #00aeef);
     background-image: -moz-linear-gradient(top, #009bd5, #00aeef);
     background-image: -o-linear-gradient(top, #009bd5, #00aeef);
-    background-image: linear-gradient(to bottom, #009bd5, #00aeef); }
+    background-image: linear-gradient(top bottom, #009bd5, #00aeef); }
 
 input.email {
   font-size: 110%;
-  min-width: 200px;
+  width: 180px;
   padding-left: 7px; }
 
 /******************************************************************
@@ -279,24 +279,33 @@ upon your base.scss styles.
 /*********************
 NAVIGATION STYLES
 *********************/
-/* .menu is clearfixed inside mixins.scss */
-.menu {
-  /* end .menu ul */ }
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .menu ul li {
-      /*
-      plan your menus and drop-downs wisely.
-      */ }
-      .menu ul li a {
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
+.a.logo {
+  margin-top: 0; }
 
-/* end .menu */
+.buy {
+  padding: 15px 30px 10px; }
+  .buy h1, .buy h3 {
+    font-size: 130%; }
+  .buy h3 {
+    font-weight: bold; }
+  .buy a {
+    position: relative;
+    float: right;
+    top: -2px; }
+
+.top-nav {
+  margin: 0 auto 30px;
+  text-align: center; }
+  .top-nav ul li {
+    width: auto;
+    float: none;
+    display: inline-block;
+    margin: 0 20px; }
+    .top-nav ul li:first-child {
+      display: none; }
+    .top-nav ul li a {
+      font-size: 95%; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -348,6 +357,9 @@ LAYOUT & GRID STYLES
 .wrap {
   max-width: 1140px; }
 
+.top-nav ul li {
+  margin: 0 25px; }
+
 .buy {
   position: absolute;
   right: 0;
@@ -369,28 +381,67 @@ LAYOUT & GRID STYLES
   .buy a {
     line-height: 1.1;
     font-size: 109%;
-    text-align: justify; }
+    text-align: justify;
+    float: none;
+    left: 1px; }
 
 .content-main {
   width: 450px; }
 
-.blog-home div {
+.blog-home div, .locations div {
   max-width: 750px;
   margin: 0 auto;
   overflow: hidden; }
-  .blog-home div article {
+  .blog-home div article, .locations div article {
     width: 30%;
     margin-right: 5%;
     display: block;
     float: left;
     padding: 30px 0 100px; }
-    .blog-home div article:last-child {
+    .blog-home div article:last-child, .locations div article:last-child {
       margin-right: 0; }
+
+.locations div article {
+  padding: 30px 0 20px 50px; }
 
 .blog-main {
   width: 700px; }
   .blog-main h1 {
     text-align: center; }
+
+.speaker-schedule ul li {
+  max-width: 730px;
+  text-align: left; }
+  .speaker-schedule ul li .time-image {
+    width: auto;
+    float: left; }
+  .speaker-schedule ul li img.photo {
+    width: 140px;
+    float: right;
+    margin-right: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 8px solid rgba(98, 173, 236, 0.3); }
+  .speaker-schedule ul li time {
+    position: relative;
+    top: 15px;
+    left: 0;
+    height: 30px;
+    float: right;
+    width: 60px;
+    font-size: 130%;
+    text-align: right; }
+  .speaker-schedule ul li .content {
+    margin-left: 30px;
+    width: 60%;
+    float: left;
+    padding-top: 15px; }
+    .speaker-schedule ul li .content h4 {
+      font-size: 30px;
+      margin-left: 0; }
+      .speaker-schedule ul li .content h4 img {
+        top: 0; }
 
 .content-main {
   width: 720px; }
@@ -398,17 +449,20 @@ LAYOUT & GRID STYLES
     width: 640px;
     margin: 0 auto; }
 
-.blog-home div {
+.blog-home div, .locations div {
   max-width: 1000px;
   margin: 0 auto;
   overflow: hidden; }
-  .blog-home div article {
+  .blog-home div article, .locations div article {
     width: 30%;
     margin-right: 5%;
     display: block;
     float: left; }
-    .blog-home div article:last-child {
+    .blog-home div article:last-child, .locations div article:last-child {
       margin-right: 0; }
+
+.speaker-schedule {
+  max-width: 1050px; }
 
 /* 
 you can call the larger styles if you want, but there's really no need 
@@ -433,8 +487,32 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
-.lt-ie9 .blog-home div {
+.lt-ie7 .top-nav ul li {
+  display: inline; }
+
+.lt-ie9 .locations div article {
+  background-image: url(../images/map/0-ie.png); }
+  .lt-ie9 .locations div article:nth-child(3) {
+    background-image: url(../images/map/2-ie.png); }
+  .lt-ie9 .locations div article h5 {
+    margin: 0;
+    padding: 0; }
+    .lt-ie9 .locations div article h5 a {
+      line-height: 2.1;
+      display: inline;
+      max-width: 100%; }
+
+.lt-ie9 .locations div article + article {
+  background-image: url(../images/map/1-ie.png); }
+
+.lt-ie9 .locations div article + article + article {
+  background-image: url(../images/map/2-ie.png); }
+
+.lt-ie9 .blog-home div, .lt-ie9 .locations div {
   padding-left: 5%; }
 
-.lt-ie9 .blog-home div article {
+.lt-ie9 .blog-home div article, .lt-ie9 .locations div article {
   width: 28%; }
+
+.lt-ie9 .button, .lt-ie9 .button:visited {
+  top: -5px; }

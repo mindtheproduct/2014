@@ -5,6 +5,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
+
 	<head>
 		<meta charset="utf-8">
 
@@ -40,6 +41,8 @@
 		<script type="text/javascript" src="//use.typekit.net/hba8xtt.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+		<!--script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/responsive-nav.min.js" /-->
+
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -50,20 +53,31 @@
 
 		      <a class="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory');?>/library/images/mtp-logo.png" alt="<?php bloginfo('name'); ?>" /></a>
 
-
-
-
-					<!--<nav role="navigation">
+					<nav role="navigation">
 						<?php bones_main_nav(); ?>
-					</nav>-->
+					</nav>
 
 			</header>
 
-		<div class="buy">
+		
 			<?php
 				$args = array('post_type' => 'price', 'posts_per_page' => 1);
 				$loop = new WP_Query($args);
 				while ($loop->have_posts()) : $loop->the_post(); ?>
+				<?php if (get_field('workshop_price')) { ?>
+					<div class="buy buy-workshops">
+						<?php if (get_field('workshop_date')) { ?>
+							<h3 class="date"><?php the_field('workshop_date');?></h3>
+						<?php } ?>
+						<?php if (get_field('workshop_price')) { ?>
+							<h1 class="price"><?php the_field('workshop_price');?></h1>
+						<?php } ?>
+			    	<?php if (get_field('workshop_action')) { ?>
+							<?php the_field('workshop_action'); ?>
+						<?php } ?>
+					</div>
+				<?php } ?>
+				<div class="buy buy-conference">
 					<?php if (get_field('buy_date')) { ?>
 						<h3 class="date"><?php the_field('buy_date');?></h3>
 					<?php } ?>
@@ -73,5 +87,6 @@
 		    	<?php if (get_field('buy_action')) { ?>
 						<?php the_field('buy_action'); ?>
 					<?php } ?>
+				</div>
 			<?php endwhile; ?>
-		</div>
+		

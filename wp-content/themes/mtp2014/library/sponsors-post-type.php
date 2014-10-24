@@ -34,8 +34,8 @@ function sponsors() {
 			'not_found_in_trash' => __( 'Nothing found in Trash', 'bonestheme' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Spronsors custom post type', 'bonestheme' ), /* Custom Type Description */
-			'public' => true,
+			'description' => __( 'Sponsors custom post type', 'bonestheme' ), /* Custom Type Description */
+			'public' => false,
 			'publicly_queryable' => true,
 			'exclude_from_search' => true,
 			'show_ui' => true,
