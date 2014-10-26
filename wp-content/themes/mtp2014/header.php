@@ -51,7 +51,16 @@
 
 			<header class="header" role="banner">
 
-		      <a class="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory');?>/library/images/mtp-logo.png" alt="<?php bloginfo('name'); ?>" /></a>
+		      <a class="logo" href="<?php echo home_url(); ?>">
+		      	
+		      	<?php if (get_field('logo')) { ?>
+                <?php $image = wp_get_attachment_image_src(get_field('logo'), 'full'); ?>
+                <img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>">
+                <?php } else { ?>
+                <img src="<?php bloginfo('template_directory');?>/library/images/mtp-logo.png" alt="<?php bloginfo('name'); ?>" />
+              <?php } ?>
+
+		      </a>
 
 					<nav role="navigation">
 						<?php bones_main_nav(); ?>
@@ -59,34 +68,36 @@
 
 			</header>
 
-		
+			
 			<?php
 				$args = array('post_type' => 'price', 'posts_per_page' => 1);
 				$loop = new WP_Query($args);
 				while ($loop->have_posts()) : $loop->the_post(); ?>
-				<?php if (get_field('workshop_price')) { ?>
-					<div class="buy buy-workshops">
-						<?php if (get_field('workshop_date')) { ?>
-							<h3 class="date"><?php the_field('workshop_date');?></h3>
-						<?php } ?>
+					<?php if (get_field('show_panel')) { ?>
 						<?php if (get_field('workshop_price')) { ?>
-							<h1 class="price"><?php the_field('workshop_price');?></h1>
+							<div class="buy buy-workshops">
+								<?php if (get_field('workshop_date')) { ?>
+									<h3 class="date"><?php the_field('workshop_date');?></h3>
+								<?php } ?>
+								<?php if (get_field('workshop_price')) { ?>
+									<h1 class="price"><?php the_field('workshop_price');?></h1>
+								<?php } ?>
+					    	<?php if (get_field('workshop_action')) { ?>
+									<?php the_field('workshop_action'); ?>
+								<?php } ?>
+							</div>
 						<?php } ?>
-			    	<?php if (get_field('workshop_action')) { ?>
-							<?php the_field('workshop_action'); ?>
-						<?php } ?>
-					</div>
+						<div class="buy buy-conference">
+							<?php if (get_field('buy_date')) { ?>
+								<h3 class="date"><?php the_field('buy_date');?></h3>
+							<?php } ?>
+							<?php if (get_field('buy_price')) { ?>
+								<h1 class="price"><?php the_field('buy_price');?></h1>
+							<?php } ?>
+				    	<?php if (get_field('buy_action')) { ?>
+								<?php the_field('buy_action'); ?>
+							<?php } ?>
+						</div>
 				<?php } ?>
-				<div class="buy buy-conference">
-					<?php if (get_field('buy_date')) { ?>
-						<h3 class="date"><?php the_field('buy_date');?></h3>
-					<?php } ?>
-					<?php if (get_field('buy_price')) { ?>
-						<h1 class="price"><?php the_field('buy_price');?></h1>
-					<?php } ?>
-		    	<?php if (get_field('buy_action')) { ?>
-						<?php the_field('buy_action'); ?>
-					<?php } ?>
-				</div>
 			<?php endwhile; ?>
 		

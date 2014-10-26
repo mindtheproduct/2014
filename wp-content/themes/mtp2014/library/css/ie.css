@@ -293,6 +293,9 @@ NAVIGATION STYLES
     float: right;
     top: -2px; }
 
+header.header {
+  padding-top: 60px; }
+
 .top-nav {
   margin: 0 auto 30px;
   text-align: center; }
@@ -363,16 +366,21 @@ LAYOUT & GRID STYLES
 .buy {
   position: absolute;
   right: 0;
-  top: 245px;
-  padding: 25px 20px 30px;
+  top: 290px;
+  padding: 20px 20px 25px;
   width: auto !important;
   text-align: justify; }
+  .buy.buy-workshops {
+    top: 130px; }
+    .buy.buy-workshops h3 {
+      font-size: 87%; }
   .buy h1, .buy h3 {
     display: block;
     padding: 0;
-    line-height: 1.2;
+    line-height: 1;
     margin: 0;
-    text-align: justify; }
+    text-align: justify;
+    text-transform: uppercase; }
   .buy h1 {
     font-size: 380%; }
   .buy h3 {
@@ -380,7 +388,7 @@ LAYOUT & GRID STYLES
     font-size: 120%; }
   .buy a {
     line-height: 1.1;
-    font-size: 109%;
+    font-size: 100%;
     text-align: justify;
     float: none;
     left: 1px; }

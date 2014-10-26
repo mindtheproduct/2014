@@ -21,20 +21,20 @@ function sponsors_link() {
 		// let's now add all the options for this post type
 		array( 'labels' => array(
 			'name' => __( 'Sponsors Link', 'bonestheme' ), /* This is the Title of the Group */
-			'singular_name' => __( 'locations', 'bonestheme' ), /* This is the individual type */
-			'all_items' => __( 'All Locations', 'bonestheme' ), /* the all items menu item */
-			'add_new' => __( 'Add New Location', 'bonestheme' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New Location', 'bonestheme' ), /* Add New Display Title */
+			'singular_name' => __( 'Sponsors Link', 'bonestheme' ), /* This is the individual type */
+			'all_items' => __( 'All Sponsors Links', 'bonestheme' ), /* the all items menu item */
+			'add_new' => __( 'Add New Sponsors Link', 'bonestheme' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New Sponsors Link', 'bonestheme' ), /* Add New Display Title */
 			'edit' => __( 'Edit', 'bonestheme' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit Locations', 'bonestheme' ), /* Edit Display Title */
-			'new_item' => __( 'New Location', 'bonestheme' ), /* New Display Title */
-			'view_item' => __( 'View Location', 'bonestheme' ), /* View Display Title */
-			'search_items' => __( 'Search Sponsors', 'bonestheme' ), /* Search Custom Type Title */ 
+			'edit_item' => __( 'Edit Sponsors Link', 'bonestheme' ), /* Edit Display Title */
+			'new_item' => __( 'New Sponsors Link', 'bonestheme' ), /* New Display Title */
+			'view_item' => __( 'View Sponsors Link', 'bonestheme' ), /* View Display Title */
+			'search_items' => __( 'Search Sponsors Link', 'bonestheme' ), /* Search Custom Type Title */ 
 			'not_found' =>  __( 'Nothing found in the Database.', 'bonestheme' ), /* This displays if there are no entries yet */ 
 			'not_found_in_trash' => __( 'Nothing found in Trash', 'bonestheme' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'Locations custom post type', 'bonestheme' ), /* Custom Type Description */
+			'description' => __( 'Sponsors Link custom post type', 'bonestheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => true,

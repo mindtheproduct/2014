@@ -41,10 +41,10 @@ jQuery(document).ready(function($) {
 	var responsive_viewport = $(window).width();
 	
 	/* if is below 481px */
-	if (responsive_viewport < 481) {
-		$('.nav li:nth-child(2)>a').html('Conf');
-		$('.nav li:nth-child(5)>a').html('About');
-	} /* end smallest screen */
+	//if (responsive_viewport < 481) {
+		//$('.nav li:nth-child(2)>a').html('Conf');
+		//$('.nav li:nth-child(5)>a').html('About');
+	//} /* end smallest screen */
 	
 	/* if is larger than 481px */
 	if (responsive_viewport > 481) {
@@ -67,13 +67,13 @@ jQuery(document).ready(function($) {
 	}
 
 	$(window).resize(function() {
-		if ($(window).width() < 481) {
-			$('.nav li:nth-child(2)>a').html('Conf');
-			$('.nav li:nth-child(5)>a').html('About');
-		} else {
-			$('.nav li:nth-child(2)>a').html('Conference');
-			$('.nav li:nth-child(5)>a').html('About us');
-		}
+		//if ($(window).width() < 481) {
+			//$('.nav li:nth-child(2)>a').html('Conf');
+			//$('.nav li:nth-child(5)>a').html('About');
+		//} else {
+			//$('.nav li:nth-child(2)>a').html('Conference');
+		//$('.nav li:nth-child(5)>a').html('About us');
+		//}
 	});
 	
 	
