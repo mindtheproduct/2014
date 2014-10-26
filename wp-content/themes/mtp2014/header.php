@@ -51,16 +51,13 @@
 
 			<header class="header" role="banner">
 
-		      <a class="logo" href="<?php echo home_url(); ?>">
-		      	
-		      	<?php if (get_field('logo')) { ?>
-                <?php $image = wp_get_attachment_image_src(get_field('logo'), 'full'); ?>
-                <img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('logo')) ?>">
-                <?php } else { ?>
-                <img src="<?php bloginfo('template_directory');?>/library/images/mtp-logo.png" alt="<?php bloginfo('name'); ?>" />
-              <?php } ?>
-
-		      </a>
+	      	<?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+				    <div class='site-logo'>
+				      <a class="logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'></a>
+				    </div>
+					<?php else : ?>
+					   <a class="logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src="<?php bloginfo('template_directory');?>/library/images/mtp-logo.png" alt="<?php bloginfo('name'); ?>" /></a>
+					<?php endif; ?>
 
 					<nav role="navigation">
 						<?php bones_main_nav(); ?>
