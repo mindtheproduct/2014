@@ -10,8 +10,6 @@ Template Name: Home
 
 		<section class="content-main">
 
-			<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-
 			<?php the_content(); ?>
 
 			<!-- Begin MailChimp Signup Form -->
