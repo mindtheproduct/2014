@@ -1,0 +1,29 @@
+.content-main{
+  width: 720px;
+  p{
+    width: 640px;
+    margin: 0 auto;
+  }
+}
+
+.blog-home, .locations{
+  div{
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+  
+    article{
+      width: 30%;
+      margin-right: 5%;
+      display: block;
+      float: left;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.speaker-schedule{
+  max-width: 1050px;
+}

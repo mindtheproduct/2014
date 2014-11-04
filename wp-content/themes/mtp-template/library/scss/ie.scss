@@ -1,0 +1,96 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+*/
+
+/* import mixins */
+@import "mixins";
+
+@import "grid";
+@import "481up";
+@import "768up";
+@import "1030up";
+
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+
+
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/
+
+.lt-ie7 .top-nav ul li{display: inline;}
+
+.lt-ie9 .locations{
+  div{
+    article{
+      background-image: url(../images/map/0-ie.png);
+      
+      &:nth-child(3){
+        background-image: url(../images/map/2-ie.png);
+      }
+      h5{
+        margin: 0;
+        padding: 0;
+        a{
+          line-height: 2.1;
+          display: inline;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.lt-ie9 .locations div article + article{
+  background-image: url(../images/map/1-ie.png);
+}
+
+.lt-ie9 .locations div article + article + article{
+  background-image: url(../images/map/2-ie.png);
+}
+
+.lt-ie9 .blog-home div, .lt-ie9 .locations div  {
+  padding-left: 5%;
+}
+.lt-ie9 .blog-home div article, .lt-ie9 .locations div article{
+  width: 28%;
+}
+
+.lt-ie9 .button, .lt-ie9 .button:visited{
+  top: -5px;
+}

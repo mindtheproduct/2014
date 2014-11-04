@@ -37,6 +37,11 @@
             $args = array('post_type' => 'social', 'posts_per_page' => 1);
             $loop = new WP_Query($args);
             while ($loop->have_posts()) : $loop->the_post(); ?>
+                <?php if (get_field('it_is_over')) { ?>
+                  <p class="it-is-over">
+                    <?php the_field('it_is_over');?>
+                  </p>
+                <?php } ?>
                 <?php if (get_field('facebook_link')) { ?>
                   <p>Get social about it
                   <a class="social-link" href="<?php the_field('twitter_link');?>"><img src="<?php bloginfo('template_directory');?>/library/images/twitter.png" alt="Share on Twitter" /></a>
@@ -54,6 +59,11 @@
                 <?php if (get_field('previous_years')) { ?>
                   <p class="previous-years">
                     <?php the_field('previous_years');?>
+                  </p>
+                <?php } ?>
+                <?php if (get_field('copyright')) { ?>
+                  <p class="copyright">
+                    <?php the_field('copyright');?>
                   </p>
                 <?php } ?>
           <?php endwhile; ?>

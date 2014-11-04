@@ -1,0 +1,161 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+blockquote p, .content-main .post blockquote p{
+  width: 80%;
+}
+
+blockquote{
+  margin: 10px 5%;
+}
+
+blockquote + p em{
+  padding: 0 0 20px 14%;
+}
+.wrap {
+	max-width: 1140px;
+}
+
+
+.top-nav {
+  ul li{
+    margin: 0 25px;
+  }
+}
+
+
+.buy{
+	position: absolute;
+	right: 0;
+	top: 290px;
+	padding: 20px 20px 25px;
+	width: auto !important;
+	text-align: justify;
+  &.buy-workshops{
+    top: 130px;
+    h3{
+      font-size: 87%;
+    }
+  }
+	h1,h3{
+		display: block;
+		padding: 0;
+		line-height: 1;
+		margin: 0;
+		text-align: justify;
+    text-transform: uppercase;
+	}
+	h1{
+		font-size: 380%;
+
+	}
+	h3{
+		font-family: $sans-serif-headline;
+		font-size: 120%;
+	}
+	a{
+		line-height: 1.1;
+		font-size: 100%;
+		text-align: justify;
+    float: none;
+    left: 1px;
+	}
+}
+
+.content-main{
+	width: 450px;
+}
+
+.blog-home, .locations{
+  div{
+    max-width: 750px;
+    margin: 0 auto;
+    overflow: hidden;
+    article{
+      width: 30%;
+      margin-right: 5%;
+      display: block;
+      float: left;
+      padding: 30px 0 100px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.locations div article{
+  padding: 30px 0 20px 50px;
+}
+
+.blog-main{
+  width: 700px;
+  h1{
+    text-align: center;
+  }
+}
+
+.speaker-schedule{
+  ul{
+    li{
+      max-width: 730px;
+      text-align: left;
+      .time-image{
+        width: auto;
+        float: left;
+      }
+      img.photo{
+        width: 140px;
+        float: right;
+        margin-right: 10px;
+        @include rounded(50%);
+        border: 8px solid rgba(98,173,236,0.3);
+      }
+      time{
+        position: relative;
+        top: 15px;
+        left: 0;
+        height: 30px;
+        float: right;
+        width: 60px;
+        font-size: 130%;
+        text-align: right;
+      }
+      .content{
+        margin-left: 30px;
+        width: 60%;
+        float: left;
+        padding-top: 15px;
+        h4{
+          font-size: 30px;
+          margin-left: 0;
+          img{
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
