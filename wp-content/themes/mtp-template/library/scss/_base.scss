@@ -136,6 +136,10 @@ p{
 	font-size: 110%;
 	color: #fff;
 	margin-bottom: 20px;
+	-webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
 blockquote p, .content-main .post blockquote p{
@@ -213,9 +217,10 @@ footer{
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: rgba(0,0,0,0.7);
+	background-color: #009fdb;
 	padding: 5px 0;
 	margin: 0;
+	color: #fff;
 	a{
 		background: url(../images/underline_small.png) repeat-x 0 75%;
 		font-weight: 500;
@@ -387,6 +392,8 @@ footer{
 	img{
 		display: block;
 		margin: 0 auto;
+		width: 200px;
+		height: 200px;
 	}
 	h2 a, h3 a, h4 a{
 		font-weight: 500;
@@ -413,6 +420,7 @@ footer{
 					display: block;
 					margin-top: 10px;
 					max-width: 100px;
+					font-size: 88%;
 					&:before{
 						clear: both;
 					}

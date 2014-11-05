@@ -659,7 +659,11 @@ h6 {
 p {
   font-size: 110%;
   color: #fff;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
 
 blockquote p, .content-main .post blockquote p {
   font-size: 22px;
@@ -723,9 +727,10 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: #009fdb;
   padding: 5px 0;
-  margin: 0; }
+  margin: 0;
+  color: #fff; }
   .it-is-over a {
     background: url(../images/underline_small.png) repeat-x 0 75%;
     font-weight: 500; }
@@ -856,7 +861,9 @@ footer {
     background-image: none; }
   .landing-page img {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 200px;
+    height: 200px; }
   .landing-page h2 a, .landing-page h3 a, .landing-page h4 a {
     font-weight: 500;
     background: url(../images/underline_small.png) repeat-x 0 75%;
@@ -880,7 +887,8 @@ footer {
       .blog-home div article a, .locations div article a {
         display: block;
         margin-top: 10px;
-        max-width: 100px; }
+        max-width: 100px;
+        font-size: 88%; }
         .blog-home div article a:before, .locations div article a:before {
           clear: both; }
 
@@ -1162,6 +1170,12 @@ tweeners.
       clear: both; }
 
   /* end .entry-content */
+  .landing-page img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto; }
+
   /*********************
   FOOTER STYLES
   *********************/

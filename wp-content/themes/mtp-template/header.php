@@ -45,7 +45,7 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery.widowFix-1.3.2.min.js"></script>
 	<script type="text/javascript">
 			jQuery(document).ready(function($) {
-			  $('.entry-content h1,.entry-content h2,.entry-content h3,.entry-content p').widowFix();
+			  $('.entry-content h1,.entry-content h2,.entry-content h3,.entry-content p, .content-main p').widowFix();
 			});
 	</script>
 	</head>
