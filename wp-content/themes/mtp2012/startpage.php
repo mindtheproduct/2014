@@ -251,7 +251,7 @@
            
            <div class="panel-member">
              <div class="white-bg">
-              <img src="images/diana_stepner.png" width="127" height="127" alt="Diana Stepner" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/diana_stepner.png" width="127" height="127" alt="Diana Stepner" />
             </div>
             <h4>Diana Stepner</h4>
             <p class="speciality">Head of Future Technologies, Pearson</p>
@@ -403,8 +403,8 @@
             <div class="sponsor-small"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/d-labs.png" width="80" height="35" alt="D-Labs" /></div>
             <div class="sponsor-small middle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/balsamiq.png" width="80" height="35" alt="Balsamiq" /></div>
             <div class="sponsor-small right"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/behance.png" width="80" height="35" alt="Behance" /></div>
-            <div class="sponsor-small"><a href="http://www.prodpad.com/" title"ProdPad Product Management Tool"><img src="images/prodpad.png" width="80" height="35" alt="ProdPad" /></a></div>
-            <div class="sponsor-small middle"><img src="i<?php echo get_stylesheet_directory_uri(); ?>/mages/blackblot.png" width="80" height="35" alt="Blackblot - Product Management Expertise" /></div>
+            <div class="sponsor-small"><a href="http://www.prodpad.com/" title"ProdPad Product Management Tool"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/prodpad.png" width="80" height="35" alt="ProdPad" /></a></div>
+            <div class="sponsor-small middle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/blackblot.png" width="80" height="35" alt="Blackblot - Product Management Expertise" /></div>
             <div class="sponsor-small right"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/orrick.png" width="80" height="35" alt="Orrick LLP" /></div>
           </div>
 

@@ -330,12 +330,6 @@ POSTS & CONTENT STYLES
     clear: both; }
 
 /* end .entry-content */
-.landing-page img {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  height: auto; }
-
 /*********************
 FOOTER STYLES
 *********************/
@@ -363,15 +357,6 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-blockquote p, .content-main .post blockquote p {
-  width: 80%; }
-
-blockquote {
-  margin: 10px 5%; }
-
-blockquote + p em {
-  padding: 0 0 20px 14%; }
-
 .wrap {
   max-width: 1140px; }
 
