@@ -4,8 +4,19 @@ Template Name: Locations
 */
 ?>
 <?php get_header(); ?>
+  
+    <div class="container content-main">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUd1UX9NlcLTyz4V5LnpwHYgJ0mdslLAw&amp;sensor=false"></script>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+      <article id="post-<?php the_ID(); ?>"  role="article">
+        <section class="entry-content" itemprop="articleBody">
+          <?php the_content(); ?>
+        </section>
+
+      </article>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUd1UX9NlcLTyz4V5LnpwHYgJ0mdslLAw&amp;sensor=false"></script>
     <script>
       var geocoder;
       var map;
@@ -40,7 +51,9 @@ Template Name: Locations
           };
           map = new google.maps.Map(document.getElementById("locations-map"), myOptions);
 
-          geocoder.geocode( { 'address': 'Barbican Centre, Silk Street, EC2Y 8DS'}, function(results, status) { 
+          geocoder.geocode( { 
+              'address': '<?php if(the_field("location_name")) the_field("location_name"); ?>, <?php if(the_field("location_address")) the_field("location_address"); ?>, <?php if(the_field("location_post_zip_code")) the_field("location_post_zip_code"); ?>, <?php if(the_field("location_country_shortcode")) the_field("location_country_shortcode"); ?>'}, 
+              function(results, status) { 
               if (status == google.maps.GeocoderStatus.OK) {
                   map.setCenter(results[0].geometry.location);
                   var image = {
@@ -55,9 +68,9 @@ Template Name: Locations
                   });
 
                   var mainContentString = '<div class="map-popup">' +
-                    '<h4>Barbican Centre</h4>' +
-                    '<h4><address><span>Silk Street</span>, <span>EC2Y 8DS</span><br />' +
-                    '<a href="https://www.google.co.uk/maps/dir//Barbican+Centre,+Silk+St,+London+EC2Y+8DS,+United+Kingdom/@51.52111,-0.100236,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x48761b56fb64b275:0xc756e26675d21f40!2m2!1d-0.093263!2d51.520075">Get directions</a></h4>' +
+                    '<h4><?php if(the_field("location_name")) the_field("location_name"); ?></h4>' +
+                    '<h4><address><span><?php if(the_field("location_address")) the_field("location_address"); ?></span>, <span><?php if(the_field("location_post_zip_code")) the_field("location_post_zip_code"); ?></span><br />' +
+                    '<?php the_field("directions_link") ?></h4>' +
                   '</div>';
 
                   google.maps.event.addListener(marker, 'click', function() {
@@ -134,18 +147,6 @@ Template Name: Locations
 
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-  
-    <div class="container content-main">
-
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-      <article id="post-<?php the_ID(); ?>"  role="article">
-        <section class="entry-content" itemprop="articleBody">
-          <?php the_content(); ?>
-        </section>
-
-      </article>
-
 
       <?php endwhile; else : ?>
 

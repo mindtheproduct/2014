@@ -77,10 +77,7 @@
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 
-    
-    <script>
-      <?php echo of_get_option('google_analytics', ''); ?>
-    </script>
+    <?php echo of_get_option('google_analytics', ''); ?>
 
 	</body>
 
