@@ -29,7 +29,11 @@
 		
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<?php include('nav-script.inc.php'); ?>
-		<?php echo of_get_option('google_analytics', ''); ?>
+		<?php if(of_get_option('google_analytics', '')) { ?>
+      <script>
+        <?php echo of_get_option('google_analytics', ''); ?>
+      </script>
+    <?php } ?>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
 		<?php wp_head(); ?>

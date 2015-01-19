@@ -40,7 +40,11 @@
     </div>
   </footer>
   
-  <?php echo of_get_option('google_analytics', ''); ?>
+  <?php if(of_get_option('google_analytics', '')) { ?>
+    <script>
+      <?php echo of_get_option('google_analytics', ''); ?>
+    </script>
+  <?php } ?>
   
 </body>
 
