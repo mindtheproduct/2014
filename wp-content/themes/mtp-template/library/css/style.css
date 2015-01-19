@@ -503,7 +503,7 @@ BUTTONS
   border-top-color: #0094cb;
   border-left-color: #0094cb;
   padding: 5px 12px;
-  color: white;
+  color: #fff;
   display: inline-block;
   font-size: 11px;
   text-transform: uppercase;
@@ -521,7 +521,7 @@ BUTTONS
   top: -2px;
   left: -2px; }
   .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
-    color: white;
+    color: #fff;
     border: 1px solid #007ead;
     border-top-color: #006489;
     border-left-color: #006489;
@@ -575,8 +575,8 @@ body {
   font-family: "brandon-grotesque", "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
   background: url(../images/background.jpg) no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -598,7 +598,7 @@ body {
 LINK STYLES
 *********************/
 a, a:visited {
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding-bottom: 7px;
   background: url("../images/underline.png") repeat-x 0 100%;
@@ -1022,11 +1022,11 @@ nav {
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.9);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background-image: linear-gradient(top bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background-image: linear-gradient(top bottom, transparent, rgba(0, 0, 0, 0.9));
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1063,7 +1063,7 @@ nav {
   .map-popup h4 {
     margin: 5px 0;
     line-height: 1.25;
-    font-size: 30px; }
+    font-size: 28px; }
   .map-popup address {
     font-style: normal;
     margin-bottom: 20px; }
@@ -1169,12 +1169,6 @@ tweeners.
       clear: both; }
 
   /* end .entry-content */
-  .landing-page img {
-    display: block;
-    margin: 0 auto;
-    width: auto;
-    height: auto; }
-
   /*********************
   FOOTER STYLES
   *********************/
@@ -1290,15 +1284,6 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  blockquote p, .content-main .post blockquote p {
-    width: 80%; }
-
-  blockquote {
-    margin: 10px 5%; }
-
-  blockquote + p em {
-    padding: 0 0 20px 14%; }
-
   .wrap {
     max-width: 1140px; }
 
@@ -1486,7 +1471,6 @@ be set to display none.
 
   @page {
     margin: 0.5cm; }
-
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
@@ -1501,3 +1485,5 @@ be set to display none.
   .respond-form,
   nav {
     display: none; } }
+
+/*# sourceMappingURL=style.css.map */
