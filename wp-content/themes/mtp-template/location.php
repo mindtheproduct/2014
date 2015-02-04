@@ -108,7 +108,8 @@ Template Name: Locations
       }
 
       function codeAddresses(address, i){
-          var concat_address = address[0] + address[1] + address[2];
+          var concat_address = address[1] + ' ' + address[2];
+          //console.log(concat_address)
           geocoder.geocode( { 'address': concat_address }, function(results, status) { 
               if (status == google.maps.GeocoderStatus.OK) {
                   var image = {
