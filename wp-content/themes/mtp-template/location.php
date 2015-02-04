@@ -70,7 +70,8 @@ Template Name: Locations
                   var mainContentString = '<div class="map-popup">' +
                     '<h4><?php if(the_field("location_name")) the_field("location_name"); ?></h4>' +
                     '<h4><address><span><?php if(the_field("location_address")) the_field("location_address"); ?></span>, <span><?php if(the_field("location_post_zip_code")) the_field("location_post_zip_code"); ?></span><br />' +
-                    '<?php the_field("directions_link") ?></h4>' +
+                    '<a href="<?php the_field("directions_link") ?>">Get directions</a>'
+                    '</h4>' +
                   '</div>';
 
                   google.maps.event.addListener(marker, 'click', function() {
@@ -107,7 +108,8 @@ Template Name: Locations
       }
 
       function codeAddresses(address, i){
-          geocoder.geocode( { 'address': address[0,1,2] }, function(results, status) { 
+          var concat_address = address[0] + address[1] + address[2];
+          geocoder.geocode( { 'address': concat_address }, function(results, status) { 
               if (status == google.maps.GeocoderStatus.OK) {
                   var image = {
                     url: '<?php echo get_template_directory_uri(); ?>/library/images/map/' + i + '.png',
