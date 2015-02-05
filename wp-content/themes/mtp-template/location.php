@@ -52,7 +52,7 @@ Template Name: Locations
           map = new google.maps.Map(document.getElementById("locations-map"), myOptions);
 
           geocoder.geocode( { 
-            'address': '<?php if(the_field("location_name")) the_field("location_name"); ?>, <?php if(the_field("location_address")) the_field("location_address"); ?>, <?php if(the_field("location_post_zip_code")) the_field("location_post_zip_code"); ?>, <?php if(the_field("location_country_shortcode")) the_field("location_country_shortcode"); ?>'},
+            'address': '<?php if(the_field("location_name")) the_field("location_name"); ?>, <?php if(the_field("location_address")) the_field("location_address"); ?>, <?php if(the_field("location_city")) the_field("location_city"); ?>, <?php if(the_field("location_post_zip_code")) the_field("location_post_zip_code"); ?>, <?php if(the_field("location_country_shortcode")) the_field("location_country_shortcode"); ?>'},
             function(results, status) { 
               if (status == google.maps.GeocoderStatus.OK) {
                   map.setCenter(results[0].geometry.location);
@@ -69,7 +69,7 @@ Template Name: Locations
 
                   var mainContentString = '<div class="map-popup">' +
                     '<h4><?php if(the_field("location_name")) the_field("location_name"); ?></h4>' +
-                    '<h4><address><span><?php if(the_field("location_address")) the_field("location_address"); ?></span>, <span><?php if(the_field("location_post_zip_code")) the_field("location_post_zip_code"); ?></span><br />' +
+                    '<h4><address><span><?php if(the_field("location_address")) the_field("location_address"); ?></span><br />' +
                     '<a href="<?php the_field("directions_link") ?>">Get directions</a>'
                     '</h4>' +
                   '</div>';
@@ -96,7 +96,7 @@ Template Name: Locations
             $args = array('post_type' => 'locations', 'posts_per_page' => -1);
             $loop = new WP_Query($args);
             while ($loop->have_posts()) : $loop->the_post(); ?>
-            ['<?php the_title(); ?>', '<?php the_field("address"); ?>', '<?php the_field("post_code"); ?>', '<?php the_field("directions_link"); ?>'],
+            ['<?php the_title(); ?>', '<?php the_field("address"); ?>', '<?php the_field("city"); ?>', '<?php the_field("post_code"); ?>', '<?php the_field("directions_link"); ?>'],
           <?php endwhile; ?>
       ];
 
@@ -108,8 +108,8 @@ Template Name: Locations
       }
 
       function codeAddresses(address, i){
-          var concat_address = address[1] + ' ' + address[2];
-          //console.log(concat_address)
+          var concat_address = address[1] + ' ' + address[2] + ' ' + address[3];
+          console.log(concat_address)
           geocoder.geocode( { 'address': concat_address }, function(results, status) { 
               if (status == google.maps.GeocoderStatus.OK) {
                   var image = {
@@ -126,8 +126,7 @@ Template Name: Locations
 
                   var contentString = '<div class="map-popup">' +
                     '<h4>' + address[0] + '</h4>' +
-                    '<h4><address><span>' + address[1] + '</span>, ' +
-                    '<span>' + address[2] + '</span><br />' +
+                    '<h4><address><span>' + address[1] + '</span><br />' +
                     '<a href="' + address[3] + '">Get directions</a></address></h4>' +
                   '</div>';
 
@@ -179,7 +178,7 @@ Template Name: Locations
         
           <article>
             <h5><a href="<?php the_field("directions_link"); ?>"><?php the_title(); ?></a></h5>
-            <p><?php the_field("address"); ?><br /> <?php the_field("post_code"); ?><br />
+            <p><?php the_field("address"); ?><br>
             <?php the_field("location_other_information"); ?></p>
           </article>
         
