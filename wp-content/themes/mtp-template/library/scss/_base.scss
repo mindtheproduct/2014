@@ -248,6 +248,7 @@ nav.main-menu{
       font-weight: bold;
       color: $blue;
       background: url("../images/underline-blue.png") repeat-x 0 100%;
+      white-space: nowrap;
     }
   }
   a.menu-button{

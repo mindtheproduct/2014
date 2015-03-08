@@ -750,7 +750,8 @@ nav.main-menu {
     margin: 8px 0 0 10px;
     font-weight: bold;
     color: #00aeef;
-    background: url("../images/underline-blue.png") repeat-x 0 100%; }
+    background: url("../images/underline-blue.png") repeat-x 0 100%;
+    white-space: nowrap; }
   nav.main-menu a.menu-button {
     background: url(../images/menu-hamburger.png) no-repeat 0 0;
     background-size: 35px 25px;
