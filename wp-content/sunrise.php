@@ -1,7 +1,8 @@
 <?php 
 
 if( defined( 'DOMAIN_CURRENT_SITE' ) && defined( 'PATH_CURRENT_SITE' ) ) {
-
+    if ( ! is_object( $current_site ) )
+        $current_site = new stdClass;
     $current_site->id = (defined( 'SITE_ID_CURRENT_SITE' ) ? constant('SITE_ID_CURRENT_SITE') : 1);
     $current_site->domain = $domain = DOMAIN_CURRENT_SITE;
     $current_site->path  = $path = PATH_CURRENT_SITE;

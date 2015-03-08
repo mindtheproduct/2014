@@ -235,7 +235,8 @@ function bones_main_nav() {
 		'link_before' => '',                            // before each link
 		'link_after' => '',                             // after each link
 		'depth' => 0,                                   // limit the depth of the nav
-		'fallback_cb' => 'bones_main_nav_fallback'      // fallback function
+		'fallback_cb' => 'bones_main_nav_fallback',      // fallback function
+		'items_wrap' => '%3$s'
 	));
 } /* end bones main nav */
 

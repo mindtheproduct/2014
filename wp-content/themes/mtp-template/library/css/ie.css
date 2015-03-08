@@ -279,35 +279,11 @@ upon your base.scss styles.
 /*********************
 NAVIGATION STYLES
 *********************/
-.a.logo {
-  margin-top: 0; }
-
-.buy {
-  padding: 15px 30px 10px; }
-  .buy h1, .buy h3 {
-    font-size: 130%; }
-  .buy h3 {
-    font-weight: bold; }
-  .buy a {
-    position: relative;
-    float: right;
-    top: -2px; }
-
-header.header {
-  padding-top: 60px; }
-
-.top-nav {
-  margin: 0 auto 30px;
-  text-align: center; }
-  .top-nav ul li {
-    width: auto;
-    float: none;
-    display: inline-block;
-    margin: 0 20px; }
-    .top-nav ul li:first-child {
-      display: none; }
-    .top-nav ul li a {
-      font-size: 95%; }
+a.logo {
+  display: block;
+  margin-top: 0;
+  text-align: center;
+  padding: 30px 0 20px 50px; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -360,38 +336,59 @@ LAYOUT & GRID STYLES
 .wrap {
   max-width: 1140px; }
 
-.top-nav ul li {
-  margin: 0 25px; }
-
-.buy {
-  position: absolute;
-  right: 0;
-  top: 290px;
-  padding: 20px 20px 25px;
-  width: auto !important;
-  text-align: justify; }
-  .buy.buy-workshops {
-    top: 130px; }
-    .buy.buy-workshops h3 {
-      font-size: 87%; }
-  .buy h1, .buy h3 {
-    display: block;
+nav.main-menu {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 40px; }
+  nav.main-menu ul {
+    display: block; }
+  nav.main-menu ul.menu-all {
     padding: 0;
-    line-height: 1;
     margin: 0;
-    text-align: justify;
-    text-transform: uppercase; }
-  .buy h1 {
-    font-size: 380%; }
-  .buy h3 {
-    font-family: "brandon-grotesque", "BrandonGrotesque-Thin", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 120%; }
-  .buy a {
-    line-height: 1.1;
+    overflow: visible;
+    max-height: auto;
+    display: block; }
+    nav.main-menu ul.menu-all li {
+      display: inline-block; }
+      nav.main-menu ul.menu-all li.current-menu-item a {
+        font-weight: normal;
+        border-top-color: #00aeef;
+        background-color: transparent;
+        font-weight: bold; }
+      nav.main-menu ul.menu-all li:hover a {
+        font-weight: normal;
+        border-top-color: #00aeef;
+        background-color: transparent;
+        color: #00aeef; }
+      nav.main-menu ul.menu-all li.get-tickets {
+        position: relative; }
+        nav.main-menu ul.menu-all li.get-tickets a.get-tickets-button, nav.main-menu ul.menu-all li.get-tickets a.get-tickets-button:hover {
+          display: inline-block;
+          background-color: #00aeef;
+          color: white;
+          font-weight: bold; }
+        nav.main-menu ul.menu-all li.get-tickets ul {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          height: 0;
+          overflow: hidden;
+          -webkit-transition: height, 0.3s, ease-in-out;
+          -transition: height, 0.3s, ease-in-out;
+          transition: height, 0.3s, ease-in-out; }
+          nav.main-menu ul.menu-all li.get-tickets ul li {
+            display: block; }
+        nav.main-menu ul.menu-all li.get-tickets.open ul {
+          height: 200px; }
+  nav.main-menu a {
+    background: none;
+    font-weight: normal;
+    padding: 10px 20px;
+    display: inline-block;
     font-size: 100%;
-    text-align: justify;
-    float: none;
-    left: 1px; }
+    border-top: 3px solid transparent;
+    color: #00aeef; }
+  nav.main-menu a.menu-button {
+    display: none; }
 
 .content-main {
   width: 450px; }
