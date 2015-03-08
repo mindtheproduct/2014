@@ -52,6 +52,9 @@ nav.main-menu{
           border-top-color: $blue;
           background-color: transparent;
           font-weight: bold;
+          &:hover{
+            font-weight: bold;
+          }
         }
       }
       &:hover a{

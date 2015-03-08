@@ -1324,6 +1324,8 @@ you can add resource intensive styles.
           border-top-color: #00aeef;
           background-color: transparent;
           font-weight: bold; }
+          nav.main-menu ul.menu-all li.current-menu-item a:hover {
+            font-weight: bold; }
         nav.main-menu ul.menu-all li:hover a {
           font-weight: normal;
           border-top-color: #00aeef;
