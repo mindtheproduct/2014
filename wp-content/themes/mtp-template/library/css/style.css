@@ -1356,7 +1356,7 @@ you can add resource intensive styles.
             top: -1px; }
           nav.main-menu ul.menu-all li.get-tickets ul {
             position: absolute;
-            top: 45px;
+            top: 46px;
             right: 0;
             max-height: 0;
             overflow: hidden;
@@ -1480,7 +1480,7 @@ This is for the larger monitors and possibly full screen viewers.
     font-size: 110%; }
 
   nav.main-menu ul.menu-all li.get-tickets ul {
-    top: 48px; } }
+    top: 49px; } }
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
