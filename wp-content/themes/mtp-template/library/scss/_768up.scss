@@ -104,7 +104,7 @@ nav.main-menu{
           }
         }
 
-        &.open, &:hover, &:focus{
+        &.open, .no-touch & &:hover{
           ul{
             max-height: 250px;
           }

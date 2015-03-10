@@ -396,7 +396,7 @@ nav.main-menu {
               border: none; }
               nav.main-menu ul.menu-all li.get-tickets ul li a :hover {
                 border: none; }
-        nav.main-menu ul.menu-all li.get-tickets.open ul, nav.main-menu ul.menu-all li.get-tickets:hover ul, nav.main-menu ul.menu-all li.get-tickets:focus ul {
+        nav.main-menu ul.menu-all li.get-tickets.open ul, .no-touch nav.main-menu ul.menu-all li.get-tickets nav.main-menu ul.menu-all li.get-tickets:hover ul {
           max-height: 250px; }
   nav.main-menu a {
     background: none;

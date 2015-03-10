@@ -54,17 +54,27 @@ jQuery(document).ready(function($) {
 	/* if is above or equal to 768px */
 	if (responsive_viewport >= 768) {
 		//$('.submenu-yo').hide();
-		// var ticketButton = $('.get-tickets-button');
-		// ticketButton.on('click',function(e){
-		// 	e.preventDefault();
-		// 	var link = $(this).parent();
-		// 	if(link.hasClass('open')) {
-		// 		link.removeClass('open');
-		// 	} else{
-		// 		link.addClass('open');
-		// 	}
-		// });
-		// $('.submenu-yo').on('onmouseout',function(e) {
+		var ticketButton = $('.get-tickets-button');
+		
+		// ticketButton.on('touchstart touchend', function(e) {});
+		ticketButton.on('click',function(e){
+			e.preventDefault();
+		});
+
+		if ('ontouchstart' in document) {
+		  $('body').removeClass('no-touch');
+		  ticketButton.on('click',function(e){
+			e.preventDefault();
+				var link = $(this).parent();
+				if(link.hasClass('open')) {
+					link.removeClass('open');
+				} else{
+					link.addClass('open');
+				}
+			});
+		}
+		
+		// ticketButton.on('touchstart touchend',function(e) {
 		// 	var link = $(this).parent();
 		// 	if(link.hasClass('open')) {
 		// 		link.removeClass('open');
