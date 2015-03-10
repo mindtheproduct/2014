@@ -54,22 +54,22 @@ jQuery(document).ready(function($) {
 	/* if is above or equal to 768px */
 	if (responsive_viewport >= 768) {
 		//$('.submenu-yo').hide();
-		var ticketButton = $('.get-tickets-button');
-		ticketButton.on('click',function(e){
-			e.preventDefault();
-			var link = $(this).parent();
-			if(link.hasClass('open')) {
-				link.removeClass('open');
-			} else{
-				link.addClass('open');
-			}
-		});
-		$('.submenu-yo').on('onmouseout',function(e) {
-			var link = $(this).parent();
-			if(link.hasClass('open')) {
-				link.removeClass('open');
-			}
-		});
+		// var ticketButton = $('.get-tickets-button');
+		// ticketButton.on('click',function(e){
+		// 	e.preventDefault();
+		// 	var link = $(this).parent();
+		// 	if(link.hasClass('open')) {
+		// 		link.removeClass('open');
+		// 	} else{
+		// 		link.addClass('open');
+		// 	}
+		// });
+		// $('.submenu-yo').on('onmouseout',function(e) {
+		// 	var link = $(this).parent();
+		// 	if(link.hasClass('open')) {
+		// 		link.removeClass('open');
+		// 	}
+		// });
 		/* load gravatars */
 		// $('.comment img[data-gravatar]').each(function(){
 		// 	$(this).attr('src',$(this).attr('data-gravatar'));
