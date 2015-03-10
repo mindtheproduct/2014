@@ -63,16 +63,17 @@ jQuery(document).ready(function($) {
 
 		if ('ontouchstart' in document) {
 		  $('body').removeClass('no-touch');
-		  ticketButton.on('click',function(e){
-			e.preventDefault();
-				var link = $(this).parent();
-				if(link.hasClass('open')) {
-					link.removeClass('open');
-				} else{
-					link.addClass('open');
-				}
-			});
 		}
+
+		ticketButton.on('click',function(e){
+		e.preventDefault();
+			var link = $(this).parent();
+			if(link.hasClass('open')) {
+				link.removeClass('open');
+			} else{
+				link.addClass('open');
+			}
+		});
 		
 		// ticketButton.on('touchstart touchend',function(e) {
 		// 	var link = $(this).parent();

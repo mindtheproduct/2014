@@ -103,8 +103,14 @@ nav.main-menu{
             }
           }
         }
-
-        &.open, .no-touch & &:hover{
+        .no-touch & {
+          &:hover {
+            ul{
+              max-height: 250px;
+            }
+          }
+        }
+        &.open{
           ul{
             max-height: 250px;
           }
