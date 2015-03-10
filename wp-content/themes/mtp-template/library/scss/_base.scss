@@ -184,6 +184,7 @@ nav.main-menu{
 	 &.open{
     ul.menu-all{
       max-height: 900px;
+      background: #000;
     }
   }
   a{
@@ -200,10 +201,14 @@ nav.main-menu{
 		max-height: 0;
 		@include transition(max-height, 0.6s, ease-in-out);
 		> li{
+			a{
+				border-top: 1px solid transparent;
+			}
 			&.current-menu-item, &:hover{
 				>a{
-					background-color: $blue;
+					color: $blue;
 					font-weight: 900;
+					border-top: 1px solid $blue;
 				}
 			}
 		}
@@ -214,6 +219,13 @@ nav.main-menu{
 			margin: 0;
 			display: inline;
 			border: none;
+			span{
+				font-weight: bold;
+      	color: $blue;
+      	background: url("../images/underline-blue.png") repeat-x 0 100%;
+      	margin-top: 8px;
+      	font-style: normal;
+			}
 		}
     h1,h3{
       padding: 0;
@@ -244,11 +256,9 @@ nav.main-menu{
       vertical-align: top;
       font-weight: bold;
       padding: 0 0 3px 0;
-      margin: 8px 0 0 10px;
-      font-weight: bold;
-      color: $blue;
-      background: url("../images/underline-blue.png") repeat-x 0 100%;
+      margin: 10px 0 0 10px;
       white-space: nowrap;
+      font-style: italic;
     }
   }
   a.menu-button{

@@ -699,7 +699,8 @@ nav.main-menu {
   text-align: center;
   position: relative; }
   nav.main-menu.open ul.menu-all {
-    max-height: 900px; }
+    max-height: 900px;
+    background: #000; }
   nav.main-menu a {
     background: none;
     font-weight: normal;
@@ -714,14 +715,23 @@ nav.main-menu {
     -webkit-transition: max-height, 0.6s, ease-in-out;
     -transition: max-height, 0.6s, ease-in-out;
     transition: max-height, 0.6s, ease-in-out; }
+    nav.main-menu ul.menu-all > li a {
+      border-top: 1px solid transparent; }
     nav.main-menu ul.menu-all > li.current-menu-item > a, nav.main-menu ul.menu-all > li:hover > a {
-      background-color: #00aeef;
-      font-weight: 900; }
+      color: #00aeef;
+      font-weight: 900;
+      border-top: 1px solid #00aeef; }
   nav.main-menu .buy a {
     padding: 0;
     margin: 0;
     display: inline;
     border: none; }
+    nav.main-menu .buy a span {
+      font-weight: bold;
+      color: #00aeef;
+      background: url("../images/underline-blue.png") repeat-x 0 100%;
+      margin-top: 8px;
+      font-style: normal; }
   nav.main-menu .buy h1, nav.main-menu .buy h3 {
     padding: 0;
     line-height: 1;
@@ -747,11 +757,9 @@ nav.main-menu {
     vertical-align: top;
     font-weight: bold;
     padding: 0 0 3px 0;
-    margin: 8px 0 0 10px;
-    font-weight: bold;
-    color: #00aeef;
-    background: url("../images/underline-blue.png") repeat-x 0 100%;
-    white-space: nowrap; }
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    font-style: italic; }
   nav.main-menu a.menu-button {
     background: url(../images/menu-hamburger.png) no-repeat 0 0;
     background-size: 35px 25px;
@@ -1159,7 +1167,6 @@ tweeners.
   NAVIGATION STYLES
   *********************/
   a.logo {
-    display: block;
     margin-top: 0;
     text-align: center;
     padding: 30px 0 20px 50px; }
@@ -1303,12 +1310,16 @@ you can add resource intensive styles.
   .wrap {
     max-width: 1140px; }
 
-  a.logo {
-    margin-top: 90px; }
+  header.header {
+    text-align: center; }
+    header.header a.logo {
+      margin-top: 90px; }
 
   nav.main-menu {
     background-color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 10; }
     nav.main-menu ul {
       display: block; }
     nav.main-menu ul.menu-all {
@@ -1318,7 +1329,11 @@ you can add resource intensive styles.
       max-height: auto;
       display: block; }
       nav.main-menu ul.menu-all li {
-        display: inline-block; }
+        display: inline-block;
+        margin: 0 15px;
+        /*for bigger menus */ }
+        nav.main-menu ul.menu-all li:nth-last-child(n+4), nav.main-menu ul.menu-all li:nth-last-child(n+4) ~ * {
+          margin: 0 5px; }
         nav.main-menu ul.menu-all li.current-menu-item a {
           font-weight: normal;
           border-top-color: #00aeef;
@@ -1340,17 +1355,24 @@ you can add resource intensive styles.
             font-weight: bold; }
           nav.main-menu ul.menu-all li.get-tickets ul {
             position: absolute;
-            top: 50px;
+            top: 45px;
             right: 0;
-            height: 0;
+            max-height: 0;
             overflow: hidden;
-            -webkit-transition: height, 0.3s, ease-in-out;
-            -transition: height, 0.3s, ease-in-out;
-            transition: height, 0.3s, ease-in-out; }
+            -webkit-transition: max-height, 0.3s, ease-in-out;
+            -transition: max-height, 0.3s, ease-in-out;
+            transition: max-height, 0.3s, ease-in-out; }
             nav.main-menu ul.menu-all li.get-tickets ul li {
-              display: block; }
-          nav.main-menu ul.menu-all li.get-tickets.open ul {
-            height: 200px; }
+              display: block;
+              margin: 1px 0 0 0; }
+              nav.main-menu ul.menu-all li.get-tickets ul li:hover {
+                background-color: rgba(255, 255, 255, 0.95); }
+              nav.main-menu ul.menu-all li.get-tickets ul li a {
+                border: none; }
+                nav.main-menu ul.menu-all li.get-tickets ul li a :hover {
+                  border: none; }
+          nav.main-menu ul.menu-all li.get-tickets.open ul, nav.main-menu ul.menu-all li.get-tickets:hover ul {
+            max-height: 250px; }
     nav.main-menu a {
       background: none;
       font-weight: normal;
@@ -1452,7 +1474,10 @@ This is for the larger monitors and possibly full screen viewers.
 */
 @media only screen and (min-width: 1240px) {
   body {
-    font-size: 110%; } }
+    font-size: 110%; }
+
+  nav.main-menu ul.menu-all li.get-tickets ul {
+    top: 48px; } }
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

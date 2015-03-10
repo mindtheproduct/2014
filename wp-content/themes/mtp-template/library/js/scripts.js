@@ -64,6 +64,12 @@ jQuery(document).ready(function($) {
 				link.addClass('open');
 			}
 		});
+		$('.submenu-yo').on('onmouseout',function(e) {
+			var link = $(this).parent();
+			if(link.hasClass('open')) {
+				link.removeClass('open');
+			}
+		});
 		/* load gravatars */
 		// $('.comment img[data-gravatar]').each(function(){
 		// 	$(this).attr('src',$(this).attr('data-gravatar'));

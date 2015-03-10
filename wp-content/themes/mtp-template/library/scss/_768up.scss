@@ -26,15 +26,19 @@ LAYOUT & GRID STYLES
 .wrap {
 	max-width: 1140px;
 }
-
-a.logo{
-  margin-top: 90px;
+header.header{
+  text-align: center;
+  a.logo{
+    margin-top: 90px;
+  }
 }
 
 
 nav.main-menu{
   background-color: rgba(0,0,0,0.7);
   margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
   ul{
     display: block;
   }
@@ -46,6 +50,13 @@ nav.main-menu{
     display: block;
     li{
       display: inline-block;
+      margin: 0 15px;
+      /*for bigger menus */
+      &:nth-last-child(n+4), 
+      &:nth-last-child(n+4) ~ * {
+        margin: 0 5px;
+      }
+
       &.current-menu-item{
         a{
           font-weight: normal;
@@ -73,18 +84,29 @@ nav.main-menu{
         }
         ul{
           position: absolute;
-          top: 50px;
+          top: 45px;
           right: 0;
-          height: 0;
+          max-height: 0;
           overflow: hidden;
-          @include transition(height, 0.3s, ease-in-out);
+          @include transition(max-height, 0.3s, ease-in-out);
           li{
             display: block;
+            margin: 1px 0 0 0;
+            &:hover{
+              background-color: rgba(255,255,255,0.95);
+            }
+            a{
+              border: none;
+              :hover{
+                border: none;
+              }
+            }
           }
         }
-        &.open{
+
+        &.open, &:hover{
           ul{
-            height: 200px;
+            max-height: 250px;
           }
         }
       }
@@ -103,6 +125,7 @@ nav.main-menu{
     display: none;
   }
 }
+
 
 
 
