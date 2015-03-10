@@ -1330,13 +1330,12 @@ you can add resource intensive styles.
       display: block; }
       nav.main-menu ul.menu-all li {
         display: inline-block;
-        margin: 0 15px;
-        /*for bigger menus */ }
-        nav.main-menu ul.menu-all li:nth-last-child(n+4), nav.main-menu ul.menu-all li:nth-last-child(n+4) ~ * {
-          margin: 0 5px; }
+        margin: 0 5px; }
+        nav.main-menu ul.menu-all li a {
+          border-top: 3px solid transparent; }
         nav.main-menu ul.menu-all li.current-menu-item a {
           font-weight: normal;
-          border-top-color: #00aeef;
+          border-top: 3px solid #00aeef;
           background-color: transparent;
           font-weight: bold; }
           nav.main-menu ul.menu-all li.current-menu-item a:hover {
