@@ -67,7 +67,7 @@ nav.main-menu{
       }
       &:hover a{
         font-weight: normal;
-        border-top-color: $blue;
+        border-top: 3px solid $blue;
         background-color: transparent;
         color: $blue;
       }
@@ -78,6 +78,8 @@ nav.main-menu{
           background-color: $blue;
           color: $white;
           font-weight: bold;
+          position: relative;
+          top: -1px;
         }
         ul{
           position: absolute;

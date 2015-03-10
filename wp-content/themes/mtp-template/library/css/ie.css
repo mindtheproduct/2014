@@ -367,7 +367,7 @@ nav.main-menu {
           font-weight: bold; }
       nav.main-menu ul.menu-all li:hover a {
         font-weight: normal;
-        border-top-color: #00aeef;
+        border-top: 3px solid #00aeef;
         background-color: transparent;
         color: #00aeef; }
       nav.main-menu ul.menu-all li.get-tickets {
@@ -376,7 +376,9 @@ nav.main-menu {
           display: inline-block;
           background-color: #00aeef;
           color: white;
-          font-weight: bold; }
+          font-weight: bold;
+          position: relative;
+          top: -1px; }
         nav.main-menu ul.menu-all li.get-tickets ul {
           position: absolute;
           top: 45px;
