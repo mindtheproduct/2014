@@ -2,32 +2,35 @@
 
 if( defined( 'DOMAIN_CURRENT_SITE' ) && defined( 'PATH_CURRENT_SITE' ) ) {
 
-    $current_site->id = (defined( 'SITE_ID_CURRENT_SITE' ) ? constant('SITE_ID_CURRENT_SITE') : 1);
-    $current_site->domain = $domain = DOMAIN_CURRENT_SITE;
-    $current_site->path  = $path = PATH_CURRENT_SITE;
+  if ( ! is_object( $current_site ) )
+    $current_site = new stdClass;
 
-    if( defined( 'BLOGID_CURRENT_SITE' ) )
-        $current_site->blog_id = BLOGID_CURRENT_SITE;
- 
-    $url = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
- 
-    $patharray = (array) explode( '/', trim( $url, '/' ));
-    $blogsearch = '';
+  $current_site->id = (defined( 'SITE_ID_CURRENT_SITE' ) ? constant('SITE_ID_CURRENT_SITE') : 1);
+  $current_site->domain = $domain = DOMAIN_CURRENT_SITE;
+  $current_site->path  = $path = PATH_CURRENT_SITE;
 
-    if( count( $patharray )){
-        foreach( $patharray as $pathpart ){
-            $pathsearch .= '/'. $pathpart;
-            $blogsearch .= $wpdb->prepare(" OR (domain = %s AND path = %s) ", $domain, $pathsearch .'/' );
-        }
-    }
- 
-    $current_blog = $wpdb->get_row( $wpdb->prepare("SELECT *, LENGTH( path ) as pathlen FROM $wpdb->blogs WHERE domain = %s AND path = '/'", $domain, $path) . $blogsearch .'ORDER BY pathlen DESC LIMIT 1');
- 
-    $blog_id = $current_blog->blog_id;
-    $public  = $current_blog->public;
-    $site_id = $current_blog->site_id;
+  if( defined( 'BLOGID_CURRENT_SITE' ) )
+      $current_site->blog_id = BLOGID_CURRENT_SITE;
 
-    $current_site = pu_get_current_site_name( $current_site );
+  $url = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
+
+  $patharray = (array) explode( '/', trim( $url, '/' ));
+  $blogsearch = '';
+
+  if( count( $patharray )){
+      foreach( $patharray as $pathpart ){
+          $pathsearch .= '/'. $pathpart;
+          $blogsearch .= $wpdb->prepare(" OR (domain = %s AND path = %s) ", $domain, $pathsearch .'/' );
+      }
+  }
+
+  $current_blog = $wpdb->get_row( $wpdb->prepare("SELECT *, LENGTH( path ) as pathlen FROM $wpdb->blogs WHERE domain = %s AND path = '/'", $domain, $path) . $blogsearch .'ORDER BY pathlen DESC LIMIT 1');
+
+  $blog_id = $current_blog->blog_id;
+  $public  = $current_blog->public;
+  $site_id = $current_blog->site_id;
+
+  $current_site = pu_get_current_site_name( $current_site );
 }
 
 function pu_get_current_site_name( $current_site ) {
