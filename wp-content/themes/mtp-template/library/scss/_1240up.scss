@@ -1,0 +1,15 @@
+body{
+  font-size: 110%;
+}
+
+nav.main-menu{
+  ul.menu-all{
+    li{
+      &.get-tickets{
+        ul{
+          top: 49px;
+        }
+      }
+    }
+  }
+}
