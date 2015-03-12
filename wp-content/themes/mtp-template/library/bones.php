@@ -240,6 +240,83 @@ function bones_main_nav() {
 	));
 } /* end bones main nav */
 
+// function price_box_loop() {
+// 	global $post;
+// 	$ticket_loop = '';
+// 	$args = array('post_type' => 'price', 'posts_per_page' => 1);
+//   $loop = new WP_Query($args);
+//   while ($loop->have_posts()) : $loop->the_post();
+//   	$buy_link = '<a href="'.the_field('buy_link').'">';
+//   	if (get_field('show_panel')) {
+//   		$ticket_loop_single = '<li class="get-tickets"><a class="get-tickets-button" href="#" title="">Get tickets</a></li><ul class="submenu-yo"><li class="buy buy-conference">'.$buy_link.'</li></ul></li>';
+//   	}
+//   	$ticket_loop .= $ticket_loop_single;
+//   endwhile;
+//   wp_reset_postdata();
+//   return $ticket_loop;
+// }
+
+function add_price_box($menu, $args) {
+	ob_start();
+	$args = array('post_type' => 'price', 'posts_per_page' => 1);
+  $loop = new WP_Query($args);
+  while ($loop->have_posts()) : $loop->the_post();
+  	if (get_field('show_panel')) {
+  		echo '<li class="get-tickets"><a class="get-tickets-button" href="#" title="">Get tickets</a><ul class="submenu-yo">';
+  		echo '<li class="buy buy-conference">';
+	  		if (get_field('buy_link')) {
+	  			$buy_link = get_field('buy_link');
+	  			echo '<a href="'.$buy_link.'">';
+	  		}	
+		  		if (get_field('buy_date')) {
+		  			$buy_date = get_field('buy_date');
+		        echo '<h3 class="date">'.$buy_date.'</h3>';
+		      }
+		      if (get_field('buy_price')) {
+		        $buy_price = get_field('buy_price');
+		        echo '<h1 class="price">'.$buy_price.'</h1>';
+		      }
+		      if (get_field('buy_action')) {
+		      	$buy_action = get_field('buy_action');
+		        echo '<span>'.$buy_action.'</span>';
+		      }
+	  		if (get_field('buy_link')) {
+	  			echo '</a>';
+	  		}
+  		echo '</li>';
+  		if (get_field('workshop_price')) {
+  			echo '<li class="buy buy-workshops">';
+  				if (get_field('workshop_buy_link')) {
+  					$workshop_buy_link = get_field('workshop_buy_link');
+  					echo '<a href="'.$workshop_buy_link.'">';
+  				}
+  					if (get_field('workshop_date')) {
+			  			$workshop_date = get_field('workshop_date');
+			        echo '<h3 class="date">'.$workshop_date.'</h3>';
+			      }
+			      if (get_field('workshop_price')) {
+			        $workshop_price = get_field('workshop_price');
+			        echo '<h1 class="price">'.$workshop_price.'</h1>';
+			      }
+			      if (get_field('workshop_action')) {
+			      	$workshop_action = get_field('workshop_action');
+			        echo '<span>'.$workshop_action.'</span>';
+			      }
+  				if (get_field('workshop_buy_link')) {
+  					echo '</a>';
+  				}
+  			echo '</li>';
+  		}
+  		echo '</ul></li>';
+  	}
+  endwhile;
+  $tickets = ob_get_clean();
+
+	$resp_nav = '<a href="#" class="menu-button">Menu</a>';
+	return '<ul class="menu-all"> '. $menu.$tickets .'</ul>'.$resp_nav;
+}
+add_filter('wp_nav_menu','add_price_box', 10, 2);
+
 // the footer menu (should you choose to use one)
 function bones_footer_links() {
 	// display the wp3 menu if available

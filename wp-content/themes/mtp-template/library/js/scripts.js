@@ -98,6 +98,10 @@ jQuery(document).ready(function($) {
 				link.addClass('open');
 			}
 		});
+
+		// if ( $( "#myDiv" ).length ) {
+  //   	$( "#myDiv" ).show();
+		// }
 		/* load gravatars */
 		// $('.comment img[data-gravatar]').each(function(){
 		// 	$(this).attr('src',$(this).attr('data-gravatar'));

@@ -503,7 +503,7 @@ BUTTONS
   border-top-color: #0094cb;
   border-left-color: #0094cb;
   padding: 5px 12px;
-  color: white;
+  color: #fff;
   display: inline-block;
   font-size: 11px;
   text-transform: uppercase;
@@ -521,7 +521,7 @@ BUTTONS
   top: -2px;
   left: -2px; }
   .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
-    color: white;
+    color: #fff;
     border: 1px solid #007ead;
     border-top-color: #006489;
     border-left-color: #006489;
@@ -575,8 +575,8 @@ body {
   font-family: "brandon-grotesque", "BrandonGrotesque-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
   background: url(../images/background.jpg) no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -598,7 +598,7 @@ body {
 LINK STYLES
 *********************/
 a, a:visited {
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding-bottom: 7px;
   background: url("../images/underline.png") repeat-x 0 100%;
@@ -737,7 +737,7 @@ nav.main-menu {
     line-height: 1;
     margin: 0;
     text-transform: uppercase;
-    color: black; }
+    color: #000; }
   nav.main-menu .buy h1 {
     font-size: 200%;
     font-weight: 900;
@@ -776,8 +776,8 @@ nav.main-menu {
   .get-tickets a.get-tickets-button {
     display: none; }
   .get-tickets ul li {
-    background-color: white;
-    color: black;
+    background-color: #fff;
+    color: #000;
     display: block;
     padding: 15px 20px 10px;
     text-align: left;
@@ -971,10 +971,6 @@ footer {
       margin-top: 100px; }
   .sponsors ul {
     margin-bottom: 30px; }
-    .sponsors ul.signature li a img {
-      max-width: 250px; }
-    .sponsors ul.platinum li a img {
-      max-width: 200px; }
     .sponsors ul li {
       display: inline-block;
       margin: 10px 20px; }
@@ -984,8 +980,6 @@ footer {
         opacity: 0.9; }
         .sponsors ul li a:hover {
           opacity: 1; }
-        .sponsors ul li a img {
-          max-width: 100px; }
 
 form.validate {
   margin: 20px auto; }
@@ -1070,11 +1064,11 @@ form.validate {
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.9);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background-image: linear-gradient(top bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background-image: linear-gradient(top bottom, transparent, rgba(0, 0, 0, 0.9));
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1350,7 +1344,7 @@ you can add resource intensive styles.
           nav.main-menu ul.menu-all li.get-tickets a.get-tickets-button, nav.main-menu ul.menu-all li.get-tickets a.get-tickets-button:hover {
             display: inline-block;
             background-color: #00aeef;
-            color: white;
+            color: #fff;
             font-weight: bold;
             position: relative;
             top: -1px; }
@@ -1544,7 +1538,6 @@ be set to display none.
 
   @page {
     margin: 0.5cm; }
-
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
@@ -1559,3 +1552,5 @@ be set to display none.
   .respond-form,
   nav {
     display: none; } }
+
+/*# sourceMappingURL=style.css.map */

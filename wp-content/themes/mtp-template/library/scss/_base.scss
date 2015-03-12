@@ -535,12 +535,6 @@ footer{
 	}
 	ul{
 		margin-bottom: 30px;
-		&.signature li a img{
-			max-width: 250px;
-		}
-		&.platinum li a img{
-			max-width: 200px;
-		}
 		li{
 			display: inline-block;
 			margin: 10px 20px;
@@ -550,9 +544,6 @@ footer{
 				opacity: 0.9;
 				&:hover{
 					opacity: 1;
-				}
-				img{
-					max-width: 100px;
 				}
 			}
 		}
